@@ -26,3 +26,22 @@ Buttons layout on the Contour Design Shuttle Pro v2:
 
 
 See
+
+
+TODO
+----
+
+* Fix up timings, make sure we properly support shortcuts with
+  Ctrl+Shift and it doesn't clog the program. Perhaps optimize and
+  keep certain keys pressed, until not needed anymore.  Especially
+  using the Jog and Shuttle.
+
+* Make sure we have a solution to ignore the device as a generic HID
+  under Ubuntu.  We can't have mouse clicks on top of our bindings!
+
+* Check udev, DISPLAY=:0.0 to start ?
+  * Retry ? Check the error message going out.
+
+* Try the xdotool with the latest bindings, XTest-based.
+  * Use xgb's `xtest` package and send the FakeInput directly there.. should work
+    a lot better.

@@ -18,6 +18,7 @@ type Config struct {
 type AppConfig struct {
 	Name               string   `json:"name"`
 	MatchWindowTitles  []string `json:"match_window_titles"`
+	SlowJog            int      `json:"slow_jog"` // Time in millisecond to use slow jog
 	windowTitleRegexps []*regexp.Regexp
 	Bindings           map[string]string `json:"bindings"`
 	bindings           []*deviceBinding
@@ -52,11 +53,12 @@ type deviceBinding struct {
 	// Output
 	holdButtons []string
 	pressButton string
+	original    string
 }
 
 func (ac *AppConfig) parseBindings() error {
 	for key, value := range ac.Bindings {
-		newBinding := &deviceBinding{heldButtons: make(map[int]bool)}
+		newBinding := &deviceBinding{heldButtons: make(map[int]bool), original: value}
 
 		// Input
 		input := strings.Split(key, "+")
@@ -82,19 +84,19 @@ func (ac *AppConfig) parseBindings() error {
 		}
 
 		// Output
-		output := strings.Split(value, "+")
-		for idx, part := range output {
-			cleanPart := strings.TrimSpace(part)
-			buttonName := strings.ToUpper(cleanPart)
-			if keyboardKeysUpper[buttonName] == 0 {
-				return fmt.Errorf("keyboard key unknown: %q", cleanPart)
-			}
-			if idx == len(output)-1 {
-				newBinding.pressButton = buttonName
-			} else {
-				newBinding.holdButtons = append(newBinding.holdButtons, buttonName)
-			}
-		}
+		// output := strings.Split(value, "+")
+		// for idx, part := range output {
+		// 	cleanPart := strings.TrimSpace(part)
+		// 	buttonName := strings.ToUpper(cleanPart)
+		// 	if keyboardKeysUpper[buttonName] == 0 {
+		// 		return fmt.Errorf("keyboard key unknown: %q", cleanPart)
+		// 	}
+		// 	if idx == len(output)-1 {
+		// 		newBinding.pressButton = buttonName
+		// 	} else {
+		// 		newBinding.holdButtons = append(newBinding.holdButtons, buttonName)
+		// 	}
+		// }
 
 		ac.bindings = append(ac.bindings, newBinding)
 

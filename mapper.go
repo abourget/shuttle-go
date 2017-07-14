@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/bendahl/uinput"
 	evdev "github.com/gvalkov/golang-evdev"
@@ -15,12 +17,14 @@ type Mapper struct {
 	virtualKeyboard uinput.Keyboard
 	inputDevice     *evdev.InputDevice
 	state           buttonsState
+	watcher         *watcher
 }
 
 type buttonsState struct {
 	jog         int
 	shuttle     int
 	buttonsHeld map[int]bool
+	lastJog     time.Time
 }
 
 func NewMapper(virtualKeyboard uinput.Keyboard, inputDevice *evdev.InputDevice) *Mapper {
@@ -39,7 +43,6 @@ func (m *Mapper) Process() error {
 		return err
 	}
 
-	fmt.Println("---")
 	m.dispatch(evs)
 
 	return nil
@@ -49,17 +52,27 @@ func (m *Mapper) dispatch(evs []evdev.InputEvent) {
 	newJogVal := jogVal(evs)
 	if m.state.jog != newJogVal {
 		if m.state.jog != -1 {
+			if m.state.lastJog.IsZero() {
+				m.state.lastJog = time.Now()
+			}
+
+			slow := ""
+			if time.Since(m.state.lastJog) > slowJogTiming() {
+				slow = "Slow"
+			}
 			// Trigger JL or JR if we're advancing or not..
 			delta := newJogVal - m.state.jog
 			if (delta > 0 || delta < -200) && (delta < 200) {
-				if err := m.EmitOther("JogR"); err != nil {
+				if err := m.EmitOther(slow + "JogR"); err != nil {
 					fmt.Println("Jog right:", err)
 				}
 			} else {
-				if err := m.EmitOther("JogL"); err != nil {
+				if err := m.EmitOther(slow + "JogL"); err != nil {
 					fmt.Println("Jog left:", err)
 				}
 			}
+
+			m.state.lastJog = time.Now()
 		}
 		m.state.jog = newJogVal
 	}
@@ -67,6 +80,7 @@ func (m *Mapper) dispatch(evs []evdev.InputEvent) {
 	newShuttleVal := shuttleVal(evs)
 	if m.state.shuttle != newShuttleVal {
 		keyName := fmt.Sprintf("S%d", newShuttleVal)
+		fmt.Println("SHUTTLE", keyName)
 		if err := m.EmitOther(keyName); err != nil {
 			fmt.Println("Shuttle movement %q: %s\n", keyName, err)
 		}
@@ -89,10 +103,22 @@ func (m *Mapper) dispatch(evs []evdev.InputEvent) {
 		m.state.buttonsHeld = heldButtons
 	}
 
-	//fmt.Printf("TYPE: %d\tCODE: %d\tVALUE: %d\n", ev.Type, ev.Code, ev.Value)
+	fmt.Println("---")
+	for _, ev := range evs {
+		fmt.Printf("TYPE: %d\tCODE: %d\tVALUE: %d\n", ev.Type, ev.Code, ev.Value)
+	}
+
 	// TODO: Lock on configuration changes
 
 	return
+}
+
+func slowJogTiming() time.Duration {
+	conf := currentConfiguration
+	if conf == nil {
+		return 200 * time.Millisecond
+	}
+	return time.Duration(conf.SlowJog) * time.Millisecond
 }
 
 func (m *Mapper) EmitOther(key string) error {
@@ -103,9 +129,11 @@ func (m *Mapper) EmitOther(key string) error {
 
 	upperKey := strings.ToUpper(key)
 
+	fmt.Println("EmitOther:", key)
+
 	for _, binding := range conf.bindings {
 		if binding.otherKey == upperKey {
-			return m.executeBinding(binding.holdButtons, binding.pressButton)
+			return m.executeBinding(binding)
 		}
 	}
 
@@ -118,32 +146,62 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 		return fmt.Errorf("No configuration for this Window")
 	}
 
+	fmt.Println("Emit Keys", modifiers, reverseShuttleKeys[keyDown])
+
 	for _, binding := range conf.bindings {
 		if reflect.DeepEqual(binding.heldButtons, modifiers) && binding.buttonDown == keyDown {
-			return m.executeBinding(binding.holdButtons, binding.pressButton)
+			return m.executeBinding(binding)
 		}
 	}
 
 	return fmt.Errorf("No binding for these keys")
 }
 
-func (m *Mapper) executeBinding(holdButtons []string, pressButton string) error {
+func (m *Mapper) executeBinding(binding *deviceBinding) error {
+	holdButtons := binding.holdButtons
+	pressButton := binding.pressButton
+
+	//xtest.FakeInputChecked(m.watcher.conn, m.watcher.rootWin)
+	fmt.Println("xdotool key --clearmodifiers", binding.original)
+	return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
+
 	fmt.Println("Executing bindings:", holdButtons, pressButton)
+
+	time.Sleep(10 * time.Millisecond)
+
 	for _, button := range holdButtons {
+		fmt.Println("Key down", button)
+		time.Sleep(10 * time.Millisecond)
+
 		if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[button]); err != nil {
 			return err
 		}
 	}
 
-	if err := m.virtualKeyboard.KeyPress(keyboardKeysUpper[pressButton]); err != nil {
+	time.Sleep(10 * time.Millisecond)
+
+	fmt.Println("Key press", pressButton)
+	if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[pressButton]); err != nil {
 		return err
 	}
 
+	time.Sleep(10 * time.Millisecond)
+
+	if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[pressButton]); err != nil {
+		return err
+	}
+
+	time.Sleep(10 * time.Millisecond)
+
 	for _, button := range holdButtons {
+		fmt.Println("Key up", button)
+		time.Sleep(10 * time.Millisecond)
 		if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[button]); err != nil {
 			return err
 		}
 	}
+
+	time.Sleep(50 * time.Millisecond)
 
 	return nil
 }
@@ -157,13 +215,16 @@ func jogVal(evs []evdev.InputEvent) int {
 	return 0
 }
 
-func shuttleVal(evs []evdev.InputEvent) int {
-	for _, ev := range evs {
+func shuttleVal(evs []evdev.InputEvent) (out int) {
+	for idx, ev := range evs {
+		if ev.Type == 0 && idx != len(evs)-1 {
+			out = 0
+		}
 		if ev.Type == 2 && ev.Code == 8 {
-			return int(ev.Value)
+			out = int(ev.Value)
 		}
 	}
-	return 0
+	return
 }
 
 func buttonVals(current map[int]bool, ev evdev.InputEvent) (out map[int]bool, lastDown int) {

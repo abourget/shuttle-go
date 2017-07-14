@@ -51,6 +51,7 @@ func main() {
 
 	fmt.Println("ready")
 	mapper := NewMapper(vk, dev)
+	mapper.watcher = watcher
 	for {
 		if err := mapper.Process(); err != nil {
 			fmt.Println("Error processing input events (continuing):", err)
