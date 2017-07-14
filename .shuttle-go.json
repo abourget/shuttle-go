@@ -1,0 +1,35 @@
+{
+    "apps": [
+        {
+            "name": "Lightworks",
+            "match_window_titles": [
+                "^Lightworks$", ".*"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F5": "a",
+                "F6": "s",
+                "F7": "i",
+                "JogL": "parenleft",
+                "JogR": "parenright",
+                "SlowJogL": "comma",
+                "SlowJogR": "period",
+                "S-7": "Y",
+                "S-6": "T",
+                "S-5": "R",
+                "S-4": "E",
+                "S-3": "j",
+                "S-2": "W",
+                "S-1": "Q",
+                "S0": "k",
+                "S1": "KP_1",
+                "S2": "KP_2",
+                "S3": "l",
+                "S4": "KP_3",
+                "S5": "KP_4",
+                "S6": "KP_5",
+                "S7": "KP_6"
+            }
+        }
+    ]
+}

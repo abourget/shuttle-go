@@ -45,3 +45,17 @@ TODO
 * Try the xdotool with the latest bindings, XTest-based.
   * Use xgb's `xtest` package and send the FakeInput directly there.. should work
     a lot better.
+
+
+Disable the native mouse pointer provided by the Shuttle with:
+
+    $ xinput --list
+    "Virtual core pointer"  id=0    [XPointer]
+    "Virtual core keyboard" id=1    [XKeyboard]
+    "Keyboard2"     id=2    [XExtensionKeyboard]
+    "Mouse2"        id=3    [XExtensionKeyboard]
+
+    # Disable with:
+    $ xinput set-int-prop 2 "Device Enabled" 8 0
+
+Ref: https://unix.stackexchange.com/questions/91075/how-to-disable-keyboard
