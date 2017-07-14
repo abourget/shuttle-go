@@ -44,11 +44,16 @@ The Shuttle acts as a mouse when you plug it into Ubuntu. Disable it with:
     "Mouse2"        id=3    [XExtensionKeyboard]
 
     # Disable with:
-    $ xinput set-int-prop 2 "Device Enabled" 8 0
+    $ xinput disable 2
 
 Ref: https://unix.stackexchange.com/questions/91075/how-to-disable-keyboard
 
 
+## Run
+
+With:
+
+    sudo shuttle-go /dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00
 
 TODO
 ----

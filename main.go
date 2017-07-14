@@ -27,6 +27,8 @@ func main() {
 		os.Exit(10)
 	}
 
+	go disableXInputPointer()
+
 	// X-window title change watcher
 	watcher := NewWindowWatcher()
 	if err := watcher.Setup(); err != nil {
@@ -37,7 +39,7 @@ func main() {
 	go watcher.Run()
 
 	// Virtual keyboard
-	vk, err := uinput.CreateKeyboard("/dev/uinput", []byte("Shuttle Pro V2"))
+	vk, err := uinput.CreateKeyboard("/dev/uinput", []byte("Go Virtual Shuttle Pro V2"))
 	if err != nil {
 		log.Println("Can't open dev:", err)
 	}
