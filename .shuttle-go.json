@@ -10,6 +10,7 @@
                 "F5": "a",
                 "F6": "s",
                 "F7": "i",
+                "B1": "hebrew_finalnun",
                 "JogL": "parenleft",
                 "JogR": "parenright",
                 "SlowJogL": "comma",
@@ -22,13 +23,13 @@
                 "S-2": "W",
                 "S-1": "Q",
                 "S0": "k",
-                "S1": "KP_1",
-                "S2": "KP_2",
+                "S1": "Z",
+                "S2": "X",
                 "S3": "l",
-                "S4": "KP_3",
-                "S5": "KP_4",
-                "S6": "KP_5",
-                "S7": "KP_6"
+                "S4": "C",
+                "S5": "V",
+                "S6": "B",
+                "S7": "N"
             }
         }
     ]

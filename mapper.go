@@ -161,6 +161,8 @@ func (m *Mapper) executeBinding(binding *deviceBinding) error {
 	holdButtons := binding.holdButtons
 	pressButton := binding.pressButton
 
+	time.Sleep(100 * time.Millisecond)
+
 	//xtest.FakeInputChecked(m.watcher.conn, m.watcher.rootWin)
 	fmt.Println("xdotool key --clearmodifiers", binding.original)
 	return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
