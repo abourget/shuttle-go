@@ -1,0 +1,32 @@
+{
+    "apps": [
+        {
+            "name": "Lightworks",
+            "match_window_titles": [
+                "^Lightworks$", ".*"
+            ],
+            "bindings": {
+                "F5": "a",
+                "F6": "s",
+                "F7": "i",
+                "JogL": "KPLeftParen",
+                "JogR": "KPRightParen",
+                "S-7": "KP1+KP2",
+                "S-6": "KP1+KP3",
+                "S-5": "KP1+KP4",
+                "S-4": "KP1+KP5",
+                "S-3": "j",
+                "S-2": "KP1+KP7",
+                "S-1": "KP1+KP8",
+                "S0": "k",
+                "S1": "KP2+KP3",
+                "S2": "KP2+KP4",
+                "S3": "l",
+                "S4": "KP2+KP6",
+                "S5": "KP2+KP7",
+                "S6": "KP2+KP8",
+                "S7": "KP2+KP9"
+            }
+        }
+    ]
+}
