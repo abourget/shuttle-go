@@ -74,8 +74,12 @@ With:
 
     sudo shuttle-go /dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00
 
-TODO
-----
+
+## License
+
+MIT
+
+##TODO
 
 * Don't require `xdotool`
   * Use xgb's `xtest` package and send the FakeInput directly there.. should work
