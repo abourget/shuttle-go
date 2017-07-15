@@ -118,7 +118,12 @@ func slowJogTiming() time.Duration {
 	if conf == nil {
 		return 200 * time.Millisecond
 	}
-	return time.Duration(conf.SlowJog) * time.Millisecond
+	slowJog := 200
+	if conf.SlowJog != nil {
+		slowJog = *conf.SlowJog
+	}
+
+	return time.Duration(slowJog) * time.Millisecond
 }
 
 func (m *Mapper) EmitOther(key string) error {
@@ -158,54 +163,61 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 }
 
 func (m *Mapper) executeBinding(binding *deviceBinding) error {
-	holdButtons := binding.holdButtons
-	pressButton := binding.pressButton
-
 	time.Sleep(100 * time.Millisecond)
 
-	//xtest.FakeInputChecked(m.watcher.conn, m.watcher.rootWin)
+	// cookie := xtest.FakeInputChecked(m.watcher.conn, 2, 0x7b00, 0, m.watcher.lastWindowID, 0, 0, 0x00)
+	// if err := cookie.Check(); err != nil {
+	// 	return nil
+	// }
+
+	// cookie = xtest.FakeInputChecked(m.watcher.conn, 3, 0x7b00, 0, m.watcher.lastWindowID, 0, 0, 0x00)
+	// return cookie.Check()
+
 	fmt.Println("xdotool key --clearmodifiers", binding.original)
 	return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
 
-	fmt.Println("Executing bindings:", holdButtons, pressButton)
+	// holdButtons := binding.holdButtons
+	// pressButton := binding.pressButton
 
-	time.Sleep(10 * time.Millisecond)
+	// fmt.Println("Executing bindings:", holdButtons, pressButton)
 
-	for _, button := range holdButtons {
-		fmt.Println("Key down", button)
-		time.Sleep(10 * time.Millisecond)
+	// time.Sleep(10 * time.Millisecond)
 
-		if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[button]); err != nil {
-			return err
-		}
-	}
+	// for _, button := range holdButtons {
+	// 	fmt.Println("Key down", button)
+	// 	time.Sleep(10 * time.Millisecond)
 
-	time.Sleep(10 * time.Millisecond)
+	// 	if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[button]); err != nil {
+	// 		return err
+	// 	}
+	// }
 
-	fmt.Println("Key press", pressButton)
-	if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[pressButton]); err != nil {
-		return err
-	}
+	// time.Sleep(10 * time.Millisecond)
 
-	time.Sleep(10 * time.Millisecond)
+	// fmt.Println("Key press", pressButton)
+	// if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[pressButton]); err != nil {
+	// 	return err
+	// }
 
-	if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[pressButton]); err != nil {
-		return err
-	}
+	// time.Sleep(10 * time.Millisecond)
 
-	time.Sleep(10 * time.Millisecond)
+	// if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[pressButton]); err != nil {
+	// 	return err
+	// }
 
-	for _, button := range holdButtons {
-		fmt.Println("Key up", button)
-		time.Sleep(10 * time.Millisecond)
-		if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[button]); err != nil {
-			return err
-		}
-	}
+	// time.Sleep(10 * time.Millisecond)
 
-	time.Sleep(50 * time.Millisecond)
+	// for _, button := range holdButtons {
+	// 	fmt.Println("Key up", button)
+	// 	time.Sleep(10 * time.Millisecond)
+	// 	if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[button]); err != nil {
+	// 		return err
+	// 	}
+	// }
 
-	return nil
+	// time.Sleep(50 * time.Millisecond)
+
+	// return nil
 }
 
 func jogVal(evs []evdev.InputEvent) int {

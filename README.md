@@ -1,17 +1,25 @@
 Linux driver for Contour Design Shuttle Pro V2
 ==============================================
 
-My goal is to set it up for the Lightworks Non-Linear Editor.
+The goal of this project is to use the Shuttle Pro V2 with the
+Lightworks Non-Linear Video Editor.  I'm using v14.
 
-This program supports having modifiers for your Shuttle Pro V2
-buttons. Avoid Lightworks key bindings with modifiers however. Capital
+This program supports having **modifiers** for your Shuttle Pro V2
+buttons.  So you can multiple the functionality of your buttons.  For
+example, you can have different bindings for
+<kbd>B1</kbd>+<kbd>F1</kbd> and <kbd>F1</kbd>.
+
+Avoid Lightworks key bindings with modifiers however. Capital
 letters are great as they cannot be combined, and are more direct and
 they are less likely to conflict with your other bindings and
-Lightworks recognizes them. All key names used here will work:
-http://www.tcl.tk/man/tcl8.4/TkCmd/keysyms.htm
+Lightworks recognizes them.
 
-Right now, you need to install `xdotool` from your package
-repositories. Eventually, we'll get rid of this dependency.
+The key names to use in the X11 bindings are found here:
+https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h or you can view them
+locally in `/usr/include/X11/keysymdef.h` (stripped of the `XK_`
+prefix).
+
+You need to install the `xdotool` package before using this program.
 
 Buttons layout on the Contour Design Shuttle Pro v2:
 
@@ -31,7 +39,18 @@ Buttons layout on the Contour Design Shuttle Pro v2:
               B2        B3
             B1            B4
 
-You can also use `SlowJogL` and `SlowJogR`, to use Frame nudge for example.
+
+## Slow Jog
+
+In addition to `JogL` and `JogR`, you can define bindings for
+`SlowJogL` and `SlowJogR`. For example, you can use a slow jog use to
+nudge by one frame at a time.
+
+If you wish to not use slow jog, set the `slow_jog` key to `0` in the
+configuration for this app. Otherwise, `slow_jog` represents the
+minimum number of milliseconds between two events to be considered
+slow. It defaults to 200 ms.
+
 
 ## Disable the native mouse pointer
 
@@ -67,3 +86,5 @@ TODO
 
 * Check udev, DISPLAY=:0.0 to start ?
   * Retry ? Check the error message going out.
+
+* Have a default SlowJog configuration.

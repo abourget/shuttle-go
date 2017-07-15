@@ -7,6 +7,7 @@ import (
 
 	"github.com/BurntSushi/xgb"
 	"github.com/BurntSushi/xgb/xproto"
+	"github.com/BurntSushi/xgb/xtest"
 )
 
 type watcher struct {
@@ -14,6 +15,7 @@ type watcher struct {
 	root                 xproto.Window
 	activeAtom, nameAtom xproto.Atom
 	prevWindowName       string
+	lastWindowID         xproto.Window
 }
 
 func NewWindowWatcher() *watcher {
@@ -28,6 +30,10 @@ func (w *watcher) Setup() error {
 
 	// Get the window id of the root window.
 	setup := xproto.Setup(X)
+
+	if err := xtest.Init(X); err != nil {
+		return err
+	}
 
 	w.conn = X
 	w.root = setup.DefaultScreen(X).Root
@@ -75,6 +81,8 @@ func (w *watcher) watch() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	w.lastWindowID = windowID
 
 	windowName := string(reply.Value)
 	if w.prevWindowName != windowName {

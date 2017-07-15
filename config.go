@@ -18,7 +18,7 @@ type Config struct {
 type AppConfig struct {
 	Name               string   `json:"name"`
 	MatchWindowTitles  []string `json:"match_window_titles"`
-	SlowJog            int      `json:"slow_jog"` // Time in millisecond to use slow jog
+	SlowJog            *int     `json:"slow_jog"` // Time in millisecond to use slow jog
 	windowTitleRegexps []*regexp.Regexp
 	Bindings           map[string]string `json:"bindings"`
 	bindings           []*deviceBinding
