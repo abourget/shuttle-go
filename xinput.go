@@ -9,7 +9,7 @@ import (
 )
 
 var xinputDevices = []*regexp.Regexp{
-	regexp.MustCompile(`↳ Contour Design ShuttlePRO v2\s+id=(\d)\s`),
+	regexp.MustCompile(`↳ Contour Design ShuttlePRO v2\s+id=(\d+)\s`),
 }
 
 func disableXInputPointer() {

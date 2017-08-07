@@ -54,11 +54,13 @@ type deviceBinding struct {
 	holdButtons []string
 	pressButton string
 	original    string
+	description string
 }
 
 func (ac *AppConfig) parseBindings() error {
 	for key, value := range ac.Bindings {
-		newBinding := &deviceBinding{heldButtons: make(map[int]bool), original: value}
+		binding, description := bindingAndDescription(value)
+		newBinding := &deviceBinding{heldButtons: make(map[int]bool), original: binding, description: description}
 
 		// Input
 		input := strings.Split(key, "+")
@@ -104,6 +106,16 @@ func (ac *AppConfig) parseBindings() error {
 	}
 
 	return nil
+}
+
+var descriptionRE = regexp.MustCompile(`([^/]*)(\s*// *(.+))?`)
+
+func bindingAndDescription(input string) (string, string) {
+	matches := descriptionRE.FindStringSubmatch(input)
+	if matches == nil {
+		return input, ""
+	}
+	return strings.TrimSpace(matches[1]), strings.TrimSpace(matches[3])
 }
 
 func LoadConfig(filename string) error {

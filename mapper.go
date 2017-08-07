@@ -163,7 +163,7 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 }
 
 func (m *Mapper) executeBinding(binding *deviceBinding) error {
-	time.Sleep(100 * time.Millisecond)
+	time.Sleep(25 * time.Millisecond)
 
 	// cookie := xtest.FakeInputChecked(m.watcher.conn, 2, 0x7b00, 0, m.watcher.lastWindowID, 0, 0, 0x00)
 	// if err := cookie.Check(); err != nil {

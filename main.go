@@ -12,17 +12,28 @@ import (
 )
 
 var configFile = flag.String("config", filepath.Join(os.Getenv("HOME"), ".shuttle-go.json"), "Location to the .shuttle-go.json configuration")
+var logFile = flag.String("log-file", "", "Log to a file instead of stdout")
 
 func main() {
 	flag.Parse()
 
-	if len(flag.Args()) != 1 {
-		fmt.Println("Missing device name as parameter.\nExample: [program] /dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00\n")
-		os.Exit(1)
+	if *logFile != "" {
+		log, err := os.Create(*logFile)
+		if err != nil {
+			os.Exit(101)
+		}
+		defer log.Close()
+		os.Stderr = log
+		os.Stdout = log
 	}
 
-	err := LoadConfig(*configFile)
-	if err != nil {
+	devicePath := "/dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00"
+	if len(flag.Args()) == 1 {
+		devicePath = flag.Arg(0)
+	}
+	fmt.Println("Using device", devicePath)
+
+	if err := LoadConfig(*configFile); err != nil {
 		fmt.Println("Error reading configuration:", err)
 		os.Exit(10)
 	}
@@ -45,7 +56,7 @@ func main() {
 	}
 
 	// Shuttle device event receiver
-	dev, err := evdev.Open(flag.Arg(0))
+	dev, err := evdev.Open(devicePath)
 	if err != nil {
 		fmt.Println("Couldn't open Shuttle device:", err)
 		os.Exit(2)
@@ -57,6 +68,7 @@ func main() {
 	for {
 		if err := mapper.Process(); err != nil {
 			fmt.Println("Error processing input events (continuing):", err)
+			os.Exit(123)
 		}
 	}
 

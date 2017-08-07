@@ -52,22 +52,6 @@ minimum number of milliseconds between two events to be considered
 slow. It defaults to 200 ms.
 
 
-## Disable the native mouse pointer
-
-The Shuttle acts as a mouse when you plug it into Ubuntu. Disable it with:
-
-    $ xinput --list
-    "Virtual core pointer"  id=0    [XPointer]
-    "Virtual core keyboard" id=1    [XKeyboard]
-    "Keyboard2"     id=2    [XExtensionKeyboard]
-    "Mouse2"        id=3    [XExtensionKeyboard]
-
-    # Disable with:
-    $ xinput disable 2
-
-Ref: https://unix.stackexchange.com/questions/91075/how-to-disable-keyboard
-
-
 ## Run
 
 With:
@@ -75,20 +59,43 @@ With:
     sudo shuttle-go /dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00
 
 
+## Install in `udev` with:
+
+As root, write in the file `/etc/udev/rules.d/01-shuttle-go.rules`:
+
+    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", ENV{MINOR}=="79", RUN+="/home/abourget/go/src/github.com/abourget/shuttle-go/udev-start.sh"
+    ACTION=="remove", ATTRS{name}=="Contour Design ShuttlePRO v2", RUN+="/usr/bin/pkill shuttle-go"
+
+Then run:
+
+    udevadm control --reload-rules && udevadm trigger
+
+Your device should not be plug-and-play.
+
+WARNING: this will be executed as ROOT when the device is plugged. If
+someone can write to that `udev-start.sh` file or anything that is run
+by that script (`shuttle-go` for example), this could lead to
+privilege escalation.
+
+If you prefer running `shuttle-go` manually from a terminal, you can change the `ACTION=="add"` line above to:
+
+    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", MODE="0644"
+
+This will grant non-root access to the device, so you can run
+`shuttle-go` and see its logs.
+
+
 ## License
 
 MIT
 
-##TODO
+## TODO
 
 * Don't require `xdotool`
-  * Use xgb's `xtest` package and send the FakeInput directly there.. should work
-    a lot better.
-  * Document in here all the keys that are work and their proper syntax. Add a few helpers.
+  * Use xgb's `xtest` package and send the FakeInput directly there..
+
+* Document in here all the keys that are work and their proper syntax. Add a few helpers.
 
 * Watch the configuration file, and reload on change.
-
-* Check udev, DISPLAY=:0.0 to start ?
-  * Retry ? Check the error message going out.
 
 * Have a default SlowJog configuration.
