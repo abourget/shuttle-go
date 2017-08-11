@@ -12,4 +12,4 @@ export XAUTHORITY=$HOME/.Xauthority
 export DISPLAY=:0.0
 export PATH=/usr/bin  # which includes the path to `xdotool`
 
-$HOME/go/bin/shuttle-go -config $HOME/.shuttle-go.json -log-file /tmp/shuttle-go.log $DEVNAME
+$HOME/go/bin/shuttle-go -config $HOME/.shuttle-go.json -log-file /tmp/shuttle-go.log $DEVNAME &
