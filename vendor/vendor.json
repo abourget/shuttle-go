@@ -21,12 +21,6 @@
 			"revisionTime": "2016-05-22T18:18:43Z"
 		},
 		{
-			"checksumSHA1": "DuHM9UBDn6AHdGqYDMZZqzFMOkI=",
-			"path": "github.com/bendahl/uinput",
-			"revision": "050ec524df761f5a128a5bb9bb5b7609f1886f21",
-			"revisionTime": "2017-06-20T19:50:18Z"
-		},
-		{
 			"checksumSHA1": "OFu4xJEIjiI8Suu+j/gabfp+y6Q=",
 			"origin": "github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew",
 			"path": "github.com/davecgh/go-spew/spew",

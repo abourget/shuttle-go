@@ -7,17 +7,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/bendahl/uinput"
 	evdev "github.com/gvalkov/golang-evdev"
 )
 
 // Mapper receives events from the Shuttle devices, and maps (through
 // configuration) to the Virtual Keyboard events.
 type Mapper struct {
-	virtualKeyboard uinput.Keyboard
-	inputDevice     *evdev.InputDevice
-	state           buttonsState
-	watcher         *watcher
+	inputDevice *evdev.InputDevice
+	state       buttonsState
+	watcher     *watcher
 }
 
 type buttonsState struct {
@@ -27,10 +25,9 @@ type buttonsState struct {
 	lastJog     time.Time
 }
 
-func NewMapper(virtualKeyboard uinput.Keyboard, inputDevice *evdev.InputDevice) *Mapper {
+func NewMapper(inputDevice *evdev.InputDevice) *Mapper {
 	m := &Mapper{
-		virtualKeyboard: virtualKeyboard,
-		inputDevice:     inputDevice,
+		inputDevice: inputDevice,
 	}
 	m.state.buttonsHeld = make(map[int]bool)
 	m.state.jog = -1

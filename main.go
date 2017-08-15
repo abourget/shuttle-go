@@ -3,11 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"log"
 	"os"
 	"path/filepath"
 
-	"github.com/bendahl/uinput"
 	"github.com/gvalkov/golang-evdev"
 )
 
@@ -49,12 +47,6 @@ func main() {
 
 	go watcher.Run()
 
-	// Virtual keyboard
-	vk, err := uinput.CreateKeyboard("/dev/uinput", []byte("Go Virtual Shuttle Pro V2"))
-	if err != nil {
-		log.Println("Can't open dev:", err)
-	}
-
 	// Shuttle device event receiver
 	dev, err := evdev.Open(devicePath)
 	if err != nil {
@@ -63,7 +55,7 @@ func main() {
 	}
 
 	fmt.Println("ready")
-	mapper := NewMapper(vk, dev)
+	mapper := NewMapper(dev)
 	mapper.watcher = watcher
 	for {
 		if err := mapper.Process(); err != nil {
