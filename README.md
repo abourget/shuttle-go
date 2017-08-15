@@ -61,28 +61,16 @@ With:
 
 ## Install in `udev` with:
 
-As root, write in the file `/etc/udev/rules.d/01-shuttle-go.rules`:
+**As root**, write file `/etc/udev/rules.d/01-shuttle-go.rules` with contents:
 
-    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", ENV{MINOR}=="79", RUN+="/home/abourget/go/src/github.com/abourget/shuttle-go/udev-start.sh"
+    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", MODE="0644"
     ACTION=="remove", ATTRS{name}=="Contour Design ShuttlePRO v2", RUN+="/usr/bin/pkill shuttle-go"
 
-Then run:
+Then run, as **root**:
 
     udevadm control --reload-rules && udevadm trigger
 
-Your device should not be plug-and-play.
-
-WARNING: this will be executed as ROOT when the device is plugged. If
-someone can write to that `udev-start.sh` file or anything that is run
-by that script (`shuttle-go` for example), this could lead to
-privilege escalation.
-
-If you prefer running `shuttle-go` manually from a terminal, you can change the `ACTION=="add"` line above to:
-
-    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", MODE="0644"
-
-This will grant non-root access to the device, so you can run
-`shuttle-go` and see its logs.
+From that point on, plug in the device, and run `shuttle-go` in any terminal (provided `shuttle-go` is in your `$PATH`).
 
 
 ## License
@@ -99,3 +87,10 @@ MIT
 * Watch the configuration file, and reload on change.
 
 * Have a default SlowJog configuration.
+
+* Make it auto-run on plug, with `udev` rules like:
+
+```
+    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", ENV{MINOR}=="79", RUN+="/home/abourget/go/src/github.com/abourget/shuttle-go/udev-start.sh"
+    ACTION=="remove", ATTRS{name}=="Contour Design ShuttlePRO v2", RUN+="/usr/bin/pkill shuttle-go"
+```
