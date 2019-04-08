@@ -3,20 +3,20 @@
         {
             "name": "Lightworks",
             "match_window_titles": [
-                "^Lightworks$", ".*"
+                "^Lightworks$"
             ],
             "slow_jog": 200,
             "bindings": {
                 "F1": "Escape // Switch viewer-recorder",
-
-                "F3": "x  // Delete",
-                "M1+F3": "z  // Blackout",
-
                 "F2": "p  // Clear Marks",
                 "M1+F2": "Cyrillic_YA  // Swap In-Out Marks",
 
+                "F3": "x  // Delete",
+                "M1+F3": "z  // Blackout",
                 "F4": "v  // Insert",
                 "M1+F4": "b  // Replace",
+                "B2+F4": "f  // Clipboard Insert",
+                "B2+M1+F4": "g  // Clipboard Replace",
 
                 "M1+F5": "h  // Home",
                 "F5": "a  // Prev Clip",
@@ -40,9 +40,9 @@
                 "M1+M2+F3": "Tab",
                 "M1+M2+F4": "Tab",
 
-                "B2+F6": "G // Previous Tile in Bin",
+                "B2+F5": "G // Previous Tile in Bin",
+                "B2+F6": "J // Next Tile in Bin",
                 "B2+F7": "H // Load Tile into Viewer",
-                "B2+F8": "J // Next Tile in Bin",
 
                 "B4+F5": "hebrew_lamed  // Live source 1",
                 "B4+F6": "hebrew_finalmem  // Live source 2",
@@ -79,6 +79,82 @@
                 "S5": "V",
                 "S6": "B",
                 "S7": "N"
+            }
+        },
+        {
+            "name": "Ardour",
+            "match_window_titles": [
+                "Ardour$"
+            ],
+            "slow_jog": 200,
+            "driver": "osc://localhost:3819",
+            "__see_ardour_docs_for_actions": "http://manual.ardour.org/appendix/menu-actions-list/ and http://manual.ardour.org/using-control-surfaces/controlling-ardour-with-osc/osc-control/",
+            "bindings": {
+                "F1": "/access_action Transport/record-roll",
+                "F2": "/transport_stop + /sleep 0.25 + /access_action Editor/playhead-to-previous-region-boundary + /sleep 0.05 + /access_action Common/finish-range + /sleep 0.05 + /jump_seconds -0.1 + /sleep 0.05 + /access_action Common/start-range + /sleep 0.05 + /access_action Editor/editor-cut # Clears Marks on Lightworks",
+                "M1+F2": "Cyrillic_YA  # Swap In-Out Marks",
+
+                "F3": "/access_action Editor/editor-cut + /access_action Editor/playhead-to-previous-region-boundary # Delete",
+                "M1+F3": "z  # Blackout",
+                "F4": "v  # Insert",
+                "M1+F4": "b  # Replace",
+                "B2+F4": "f  # Clipboard Insert",
+                "B2+M1+F4": "g  # Clipboard Replace",
+
+                "M1+F5": "/goto_start  # Home",
+                "F5": "/access_action Editor/playhead-to-previous-region-boundary  # Prev Clip",
+                "F6": "/access_action Editor/playhead-to-next-region-boundary",
+                "M1+F6": "/goto_end  # End",
+
+                "F7": "/access_action Common/start-range  # Mark In",
+                "M1+F7": "/access_action Common/finish-range  # Mark Out",
+
+                "F8": "/access_action Common/finish-range  # Play Backwards",
+                "F9": "/transport_play  # Play",
+
+                "M2+F1": "q",
+                "M2+F2": "w",
+                "M2+F3": "e",
+                "M2+F4": "r",
+                "M2+F9": "Tab",
+                "M1+M2+F1": "Tab",
+                "M1+M2+F2": "Tab",
+                "M1+M2+F3": "Tab",
+                "M1+M2+F4": "Tab",
+
+                "B2+F5": "G  # Previous Tile in Bin",
+                "B2+F6": "J  # Next Tile in Bin",
+                "B2+F7": "H  # Load Tile into Viewer",
+
+                "B1+F1": "1  # Toggle V1",
+                "B1+F2": "2  # Toggle V2",
+                "B1+F3": "Ctrl+3  # Toggle V3",
+                "B1+F4": "Ctrl+0  # Toggle All Tracks",
+                "B1+F5": "3  # Toggle A1",
+                "B1+F6": "4  # Toggle A2",
+                "B1+F7": "5  # Toggle A3",
+                "B1+F8": "6  # Toggle A4",
+                "B1+F9": "7  # Toggle A5",
+
+                "JogL": "parenleft",
+                "JogR": "parenright",
+                "SlowJogL": "comma",
+                "SlowJogR": "period",
+                "S-7": "/set_transport_speed -8.0",
+                "S-6": "/set_transport_speed -4.0",
+                "S-5": "/set_transport_speed -2.0",
+                "S-4": "/set_transport_speed -1.0",
+                "S-3": "/set_transport_speed -0.5",
+                "S-2": "/set_transport_speed -0.25",
+                "S-1": "/set_transport_speed -0.1",
+                "S0": "/transport_stop",
+                "S1": "/set_transport_speed 0.1",
+                "S2": "/set_transport_speed 0.25",
+                "S3": "/set_transport_speed 0.5",
+                "S4": "/set_transport_speed 1.0",
+                "S5": "/set_transport_speed 2.0",
+                "S6": "/set_transport_speed 4.0",
+                "S7": "/set_transport_speed 8.0"
             }
         }
     ]

@@ -10,6 +10,7 @@ import (
 )
 
 var configFile = flag.String("config", filepath.Join(os.Getenv("HOME"), ".shuttle-go.json"), "Location to the .shuttle-go.json configuration")
+var debugMode = flag.Bool("debug", false, "Show debug messages (like window titles)")
 var logFile = flag.String("log-file", "", "Log to a file instead of stdout")
 
 func main() {
@@ -54,9 +55,13 @@ func main() {
 		os.Exit(2)
 	}
 
-	fmt.Println("ready")
+	fmt.Println("Ready")
 	mapper := NewMapper(dev)
 	mapper.watcher = watcher
+
+	// IF there's an `osc` driver specified, launch an OSC listener too:
+	go listenOSCFeedback()
+
 	for {
 		if err := mapper.Process(); err != nil {
 			fmt.Println("Error processing input events (continuing):", err)

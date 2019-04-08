@@ -100,12 +100,20 @@ func (w *watcher) loadWindowConfiguration(windowName string) {
 
 	for _, conf := range loadedConfiguration.Apps {
 		for _, re := range conf.windowTitleRegexps {
+			if *debugMode {
+				fmt.Println("Testing title:", windowName)
+			}
 			if re.MatchString(windowName) {
+				fmt.Printf("Switching configuration for app %q\n", conf.Name)
 				currentConfiguration = conf
-				fmt.Printf("Applying configuration for app %q\n", conf.Name)
 				return
 			}
 		}
 	}
-	currentConfiguration = nil
+
+	if !*debugMode {
+		currentConfiguration = nil
+	} else {
+		fmt.Println("Keeping previous config even if window changed")
+	}
 }

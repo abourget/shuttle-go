@@ -4,10 +4,12 @@ import (
 	"fmt"
 	"os/exec"
 	"reflect"
+	"strconv"
 	"strings"
 	"time"
 
 	evdev "github.com/gvalkov/golang-evdev"
+	"github.com/hypebeast/go-osc/osc"
 )
 
 // Mapper receives events from the Shuttle devices, and maps (through
@@ -77,9 +79,11 @@ func (m *Mapper) dispatch(evs []evdev.InputEvent) {
 	newShuttleVal := shuttleVal(evs)
 	if m.state.shuttle != newShuttleVal {
 		keyName := fmt.Sprintf("S%d", newShuttleVal)
-		fmt.Println("SHUTTLE", keyName)
+		if *debugMode {
+			fmt.Println("SHUTTLE", keyName)
+		}
 		if err := m.EmitOther(keyName); err != nil {
-			fmt.Println("Shuttle movement %q: %s\n", keyName, err)
+			fmt.Printf("Shuttle movement %q: %s\n", keyName, err)
 		}
 		m.state.shuttle = newShuttleVal
 	}
@@ -100,9 +104,11 @@ func (m *Mapper) dispatch(evs []evdev.InputEvent) {
 		m.state.buttonsHeld = heldButtons
 	}
 
-	fmt.Println("---")
-	for _, ev := range evs {
-		fmt.Printf("TYPE: %d\tCODE: %d\tVALUE: %d\n", ev.Type, ev.Code, ev.Value)
+	if *debugMode {
+		fmt.Println("---")
+		for _, ev := range evs {
+			fmt.Printf("TYPE: %d\tCODE: %d\tVALUE: %d\n", ev.Type, ev.Code, ev.Value)
+		}
 	}
 
 	// TODO: Lock on configuration changes
@@ -131,7 +137,9 @@ func (m *Mapper) EmitOther(key string) error {
 
 	upperKey := strings.ToUpper(key)
 
-	fmt.Println("EmitOther:", key)
+	if *debugMode {
+		fmt.Println("EmitOther:", key)
+	}
 
 	for _, binding := range conf.bindings {
 		if binding.otherKey == upperKey {
@@ -148,7 +156,9 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 		return fmt.Errorf("No configuration for this Window")
 	}
 
-	fmt.Println("Emit Keys", modifiers, reverseShuttleKeys[keyDown])
+	if *debugMode {
+		fmt.Println("Emit Keys", modifiers, reverseShuttleKeys[keyDown])
+	}
 
 	for _, binding := range conf.bindings {
 		if reflect.DeepEqual(binding.heldButtons, modifiers) && binding.buttonDown == keyDown {
@@ -161,60 +171,75 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 
 func (m *Mapper) executeBinding(binding *deviceBinding) error {
 	time.Sleep(25 * time.Millisecond)
+	switch binding.driver {
+	case "xdotool", "":
+		fmt.Println("xdotool key --clearmodifiers", binding.original)
+		return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
+	case "osc":
+		msgs := parseOSCMessages(binding.original)
+		if msgs == nil {
+			fmt.Printf("Failed parsing OSC binding for keys %q. Remember %q should start with an /\n", binding.rawKey, binding.rawValue)
+			return nil
+		}
+		for _, msg := range msgs {
+			if msg.Address == "/sleep" {
+				fmt.Println("Sleeping for", msg.Arguments[0].(float64), "seconds")
+				time.Sleep(time.Duration(msg.Arguments[0].(float64)*1000) * time.Millisecond)
+				continue
+			}
+			fmt.Println("Sending OSC message:", msg)
+			err := binding.oscClient.Send(msg)
+			if err != nil {
+				return err
+			}
+		}
+		return nil
+	default:
+		panic("unreachable")
+	}
+}
 
-	// cookie := xtest.FakeInputChecked(m.watcher.conn, 2, 0x7b00, 0, m.watcher.lastWindowID, 0, 0, 0x00)
-	// if err := cookie.Check(); err != nil {
-	// 	return nil
-	// }
+func parseOSCMessages(multiInput string) (out []*osc.Message) {
+	inputs := strings.Split(multiInput, " + ")
+	for _, input := range inputs {
+		msg := parseOSCMessage(strings.TrimSpace(input))
+		if msg == nil {
+			return nil
+		}
+		out = append(out, msg)
+	}
+	return
+}
 
-	// cookie = xtest.FakeInputChecked(m.watcher.conn, 3, 0x7b00, 0, m.watcher.lastWindowID, 0, 0, 0x00)
-	// return cookie.Check()
+func parseOSCMessage(input string) *osc.Message {
+	fields := strings.Fields(input) // move to something like `sh` interpretation (or quoted strings) if needed
+	if len(fields) == 0 {
+		return nil
+	}
 
-	fmt.Println("xdotool key --clearmodifiers", binding.original)
-	return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
+	if !strings.HasPrefix(fields[0], "/") {
+		return nil
+	}
 
-	// holdButtons := binding.holdButtons
-	// pressButton := binding.pressButton
-
-	// fmt.Println("Executing bindings:", holdButtons, pressButton)
-
-	// time.Sleep(10 * time.Millisecond)
-
-	// for _, button := range holdButtons {
-	// 	fmt.Println("Key down", button)
-	// 	time.Sleep(10 * time.Millisecond)
-
-	// 	if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[button]); err != nil {
-	// 		return err
-	// 	}
-	// }
-
-	// time.Sleep(10 * time.Millisecond)
-
-	// fmt.Println("Key press", pressButton)
-	// if err := m.virtualKeyboard.KeyDown(keyboardKeysUpper[pressButton]); err != nil {
-	// 	return err
-	// }
-
-	// time.Sleep(10 * time.Millisecond)
-
-	// if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[pressButton]); err != nil {
-	// 	return err
-	// }
-
-	// time.Sleep(10 * time.Millisecond)
-
-	// for _, button := range holdButtons {
-	// 	fmt.Println("Key up", button)
-	// 	time.Sleep(10 * time.Millisecond)
-	// 	if err := m.virtualKeyboard.KeyUp(keyboardKeysUpper[button]); err != nil {
-	// 		return err
-	// 	}
-	// }
-
-	// time.Sleep(50 * time.Millisecond)
-
-	// return nil
+	msg := osc.NewMessage(fields[0])
+	for _, arg := range fields[1:] {
+		if val, err := strconv.ParseFloat(arg, 64); err == nil {
+			msg.Append(val)
+		} else if val, err := strconv.ParseInt(arg, 10, 64); err == nil {
+			msg.Append(val)
+		} else if arg == "true" {
+			msg.Append(true)
+		} else if arg == "false" {
+			msg.Append(false)
+		} else if arg == "nil" {
+			msg.Append(nil)
+		} else if arg == "null" {
+			msg.Append(nil)
+		} else {
+			msg.Append(arg)
+		}
+	}
+	return msg
 }
 
 func jogVal(evs []evdev.InputEvent) int {
