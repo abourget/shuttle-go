@@ -2,7 +2,9 @@ Linux driver for Contour Design Shuttle Pro V2
 ==============================================
 
 The goal of this project is to use the Shuttle Pro V2 with the
-Lightworks Non-Linear Video Editor.  I'm using v14.
+Lightworks Non-Linear Video Editor.  I'm using v14. I recently
+introduced Open Sound Control, so you can also pilot Ardour and other
+OSC-enabled software.
 
 This program supports having **modifiers** for your Shuttle Pro V2
 buttons.  So you can multiple the functionality of your buttons.  For
@@ -71,6 +73,20 @@ Then run, as **root**:
     udevadm control --reload-rules && udevadm trigger
 
 From that point on, plug in the device, and run `shuttle-go` in any terminal (provided `shuttle-go` is in your `$PATH`).
+
+
+## Using Open Sound Control
+
+In the configuration, use `"driver": "osc://host:port"`, then all your
+bindings can be of the format: `/osc/address/path param1 param2
+param3`.
+
+You can send multiple messages with one key by separating those
+bindings by ` + ` (that's a space, a plus sign, and another space).
+
+A special `/sleep 0.123` message can be added, and it interpreted by
+`shuttle-go` as a sleep between two OSC messages. Use that if your
+program goes berzerk when messages are too close.
 
 
 ## License
