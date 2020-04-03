@@ -82,6 +82,21 @@
             }
         },
         {
+            "name": "Open Broadcasting Studio",
+            "match_window_titles": [
+                ".*OBS Studio.*"
+            ],
+            "slow_jog": 200,
+            "driver": "exec",
+            "bindings": {
+                "F1": "obs-ws-cmd /scene=GH-5",
+                "F2": "obs-ws-cmd /vol=XY H5,0.6; obs-ws-cmd /vol=Ext Mic H5,0.1",
+                "F3": "obs-ws-cmd /vol=XY H5,0.1; obs-ws-cmd /vol=Ext Mic H5,0.7",
+                "F4": "obs-ws-cmd /scene=Chrome",
+                "F5": "obs-ws-cmd /scene=Terminal"
+            }
+        },
+        {
             "name": "Ardour",
             "match_window_titles": [
                 "Ardour$"

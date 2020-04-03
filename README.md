@@ -2,29 +2,24 @@ Linux driver for Contour Design Shuttle Pro V2
 ==============================================
 
 The goal of this project is to use the Shuttle Pro V2 with the
-Lightworks Non-Linear Video Editor.  I'm using v14. I recently
-introduced Open Sound Control, so you can also pilot Ardour and other
-OSC-enabled software.
+Lightworks Non-Linear Video Editor, but `shuttle-go` allows you
+to control anything.  It has support for:
+
+* Sending keyboard events (with the default `xdotool` driver)
+* Sending Open Source Control messages (with the `ocs://` driver)
+* Executing any command through `bash -c` (with the `exec` driver)
 
 This program supports having **modifiers** for your Shuttle Pro V2
 buttons.  So you can multiple the functionality of your buttons.  For
 example, you can have different bindings for
 <kbd>B1</kbd>+<kbd>F1</kbd> and <kbd>F1</kbd>.
 
-Avoid Lightworks key bindings with modifiers however. Capital
-letters are great as they cannot be combined, and are more direct and
-they are less likely to conflict with your other bindings and
-Lightworks recognizes them.
-
-The key names to use in the X11 bindings are found here:
-https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h or you can view them
-locally in `/usr/include/X11/keysymdef.h` (stripped of the `XK_`
-prefix).
-
-You need to install the `xdotool` package before using this program.
+## Layout
 
 Buttons layout on the Contour Design Shuttle Pro v2:
 
+
+```
 
            F1   F2   F3   F4
 
@@ -41,8 +36,9 @@ Buttons layout on the Contour Design Shuttle Pro v2:
               B2        B3
             B1            B4
 
+```
 
-## Slow Jog
+### Slow Jog
 
 In addition to `JogL` and `JogR`, you can define bindings for
 `SlowJogL` and `SlowJogR`. For example, you can use a slow jog use to
@@ -52,6 +48,45 @@ If you wish to not use slow jog, set the `slow_jog` key to `0` in the
 configuration for this app. Otherwise, `slow_jog` represents the
 minimum number of milliseconds between two events to be considered
 slow. It defaults to 200 ms.
+
+
+### Lightworks
+
+Avoid Lightworks key bindings with modifiers however. Capital
+letters are great as they cannot be combined, and are more direct and
+they are less likely to conflict with your other bindings and
+Lightworks recognizes them.
+
+### Drivers
+
+See `sample_config.json` for example configuration of each driver.
+
+#### `xdotool` (default)
+
+The key names to use in the X11 bindings are found here:
+https://www.cl.cam.ac.uk/~mgk25/ucs/keysymdef.h or you can view them
+locally in `/usr/include/X11/keysymdef.h` (stripped of the `XK_`
+prefix).
+
+You need to install the `xdotool` package before using this driver (default).
+
+#### `exec`
+
+Any bindings triggered will execute the corresponding command through
+`/bin/bash -c "your command"`
+
+#### `osc://host:port`
+
+In the configuration, use `"driver": "osc://host:port"`, then all your
+bindings can be of the format: `/osc/address/path param1 param2
+param3`.
+
+You can send multiple messages with one key by separating those
+bindings by ` + ` (that's a space, a plus sign, and another space).
+
+A special `/sleep 0.123` message can be added, and it interpreted by
+`shuttle-go` as a sleep between two OSC messages. Use that if your
+program goes berzerk when messages are too close.
 
 
 ## Run
@@ -75,20 +110,6 @@ Then run, as **root**:
 From that point on, plug in the device, and run `shuttle-go` in any terminal (provided `shuttle-go` is in your `$PATH`).
 
 
-## Using Open Sound Control
-
-In the configuration, use `"driver": "osc://host:port"`, then all your
-bindings can be of the format: `/osc/address/path param1 param2
-param3`.
-
-You can send multiple messages with one key by separating those
-bindings by ` + ` (that's a space, a plus sign, and another space).
-
-A special `/sleep 0.123` message can be added, and it interpreted by
-`shuttle-go` as a sleep between two OSC messages. Use that if your
-program goes berzerk when messages are too close.
-
-
 ## License
 
 MIT
@@ -97,8 +118,6 @@ MIT
 
 * Don't require `xdotool`
   * Use xgb's `xtest` package and send the FakeInput directly there..
-
-* Document in here all the keys that are work and their proper syntax. Add a few helpers.
 
 * Watch the configuration file, and reload on change.
 
