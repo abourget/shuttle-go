@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"time"
 
 	"github.com/BurntSushi/xgb"
@@ -72,14 +71,16 @@ func (w *watcher) watch() {
 	reply, err := xproto.GetProperty(w.conn, false, w.root, w.activeAtom,
 		xproto.GetPropertyTypeAny, 0, (1<<32)-1).Reply()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("watch windows, failed to get window properties:", err)
+		return
 	}
 	windowID := xproto.Window(xgb.Get32(reply.Value))
 
 	reply, err = xproto.GetProperty(w.conn, false, windowID, w.nameAtom,
 		xproto.GetPropertyTypeAny, 0, (1<<32)-1).Reply()
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("watch windows, re-failed to get window properties:", err)
+		return
 	}
 
 	w.lastWindowID = windowID
