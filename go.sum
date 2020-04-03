@@ -1,0 +1,7 @@
+github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802 h1:1BDTz0u9nC3//pOCMdNH+CiXJVYJh5UQNCOBG7jbELc=
+github.com/BurntSushi/xgb v0.0.0-20160522181843-27f122750802/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
+github.com/gvalkov/golang-evdev v0.0.0-20160925111049-87c03aa1a370 h1:jsJ5OH/7qrOnuYEdE5WtvJTGk3ssEefhL4Z970XkcfU=
+github.com/gvalkov/golang-evdev v0.0.0-20160925111049-87c03aa1a370/go.mod h1:SAzVFKCRezozJTGavF3GX8MBUruETCqzivVLYiywouA=
+github.com/hypebeast/go-osc v0.0.0-20200115085105-85fee7fed692 h1:a5rmrg0wd6LLuRQGk9lopHHgzyjM8DjH0Ek0iHki5Lc=
+github.com/hypebeast/go-osc v0.0.0-20200115085105-85fee7fed692/go.mod h1:VCiuhv+/+jPFqHeZAgVC61Cr4drPso5XEEKmEiqCsuU=
+github.com/stretchr/testify v1.1.5-0.20161217200445-2402e8e7a02f/go.mod h1:a8OnRcib4nhh0OaRAV+Yts87kKdq0PP7pXfy6kDkUVs=
