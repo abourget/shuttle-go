@@ -19,7 +19,7 @@ func TestBindingAndDescription(t *testing.T) {
 	}
 
 	for idx, test := range tests {
-		bind, desc := bindingAndDescription(test.in)
+		bind, desc := bindingAndDescription("xdo", test.in)
 		assert.Equal(t, test.bind, bind, "%d", idx)
 		assert.Equal(t, test.desc, desc, "%d", idx)
 	}

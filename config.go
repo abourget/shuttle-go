@@ -74,6 +74,8 @@ func (ac *AppConfig) parseBindings() error {
 
 	switch {
 	case ac.Driver == "":
+	case ac.Driver == "exec":
+		driverProtocol = "exec"
 	case ac.Driver == "xdotool":
 	case strings.HasPrefix(ac.Driver, "osc://"):
 		addr, err := url.Parse(ac.Driver)
@@ -89,10 +91,14 @@ func (ac *AppConfig) parseBindings() error {
 		driverProtocol = "osc"
 		oscClient = osc.NewClient(hostParts[0], int(port))
 	default:
-		return fmt.Errorf(`invalid driver %q, use one of: "xdotool" (default), "osc://address:port"`, ac.Driver)
+		return fmt.Errorf(`invalid driver %q, use one of: "xdotool" (default), "exec", "osc://address:port"`, ac.Driver)
 	}
 
 	for key, value := range ac.Bindings {
+		if strings.HasPrefix(key, "_") {
+			continue
+		}
+
 		binding, description := bindingAndDescription(driverProtocol, value)
 		newBinding := &deviceBinding{heldButtons: make(map[int]bool), rawKey: key, rawValue: value, original: binding, description: description, driver: driverProtocol, oscClient: oscClient}
 
@@ -149,7 +155,7 @@ var oscDescriptionRE = regexp.MustCompile(`([^#]*)(\s*# *(.+))?`)
 
 func bindingAndDescription(protocol, input string) (string, string) {
 	re := xdoDescriptionRE
-	if protocol == "osc" {
+	if protocol == "osc" || protocol == "exec" {
 		re = oscDescriptionRE
 	}
 

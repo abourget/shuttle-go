@@ -91,12 +91,12 @@
             "__see_ardour_docs_for_actions": "http://manual.ardour.org/appendix/menu-actions-list/ and http://manual.ardour.org/using-control-surfaces/controlling-ardour-with-osc/osc-control/",
             "bindings": {
                 "F1": "/access_action Transport/record-roll",
-                "F2": "/transport_stop + /sleep 0.25 + /access_action Editor/playhead-to-previous-region-boundary + /sleep 0.05 + /access_action Common/finish-range + /sleep 0.05 + /jump_seconds -0.1 + /sleep 0.05 + /access_action Common/start-range + /sleep 0.05 + /access_action Editor/editor-cut # Clears Marks on Lightworks",
+                "F2": "/transport_stop + /sleep 0.25 + /access_action Editor/playhead-to-previous-region-boundary + /sleep 0.05 + /access_action Common/finish-range + /sleep 0.05 + /jump_seconds -0.1 + /sleep 0.05 + /access_action Common/start-range + /sleep 0.05 + /access_action Editor/editor-cut  # Stop recording and clear the last 0.05 second of recording (because it might catch the click of the Shuttle !)",
                 "M1+F2": "Cyrillic_YA  # Swap In-Out Marks",
 
-                "F3": "/access_action Editor/editor-cut + /access_action Editor/playhead-to-previous-region-boundary # Delete",
+                "F3": "/access_action Common/finish-range + /access_action Editor/playhead-to-range-start + /access_action Editor/editor-cut",
                 "M1+F3": "z  # Blackout",
-                "F4": "v  # Insert",
+                "F4": "/access_action Common/start-range + /sleep 0.05 + /access_action Editor/editor-cut  # Truncate end of clip",
                 "M1+F4": "b  # Replace",
                 "B2+F4": "f  # Clipboard Insert",
                 "B2+M1+F4": "g  # Clipboard Replace",

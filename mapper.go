@@ -172,6 +172,9 @@ func (m *Mapper) EmitKeys(modifiers map[int]bool, keyDown int) error {
 func (m *Mapper) executeBinding(binding *deviceBinding) error {
 	time.Sleep(25 * time.Millisecond)
 	switch binding.driver {
+	case "exec":
+		fmt.Printf("EXEC: /bin/bash -c %q\n", binding.original)
+		return exec.Command("/bin/bash", "-c", binding.original).Run()
 	case "xdotool", "":
 		fmt.Println("xdotool key --clearmodifiers", binding.original)
 		return exec.Command("xdotool", "key", "--clearmodifiers", binding.original).Run()
