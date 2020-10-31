@@ -171,6 +171,31 @@
                 "S6": "/set_transport_speed 4.0",
                 "S7": "/set_transport_speed 8.0"
             }
+        },
+        {
+            "name": "Blender",
+            "match_window_titles": [
+                "^Blender"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "JogL": "0xff51 // One frame left (left arrow)",
+                "JogR": "0xff53 // One frame right (right arrow)",
+                "S-1": "// Zoom Out (Mouse Wheel Out [default])",
+                "S1": "// Zoom In (Mouse Wheel In [default])",
+                "F1": "0xff56 // Clip Start (PageDown)",
+                "F2": "0xff55 // Clip End (PageUp)",
+                "F3": "k // Cut",
+                "F4": "m // Add Marker",
+                "F5": "0xffe2+0xffe3+space  // Play reverse (shift+ctrl+space)",
+                "F6": "0xffe9+0xff56 // clip Middle (alt+PageDown)",
+                "F7": "0x005b // Select Clip - playhead left (])",
+                "F8": "0x005d // Select Clip - playhead right (])",
+                "F9": "space // Play",
+                "B1": "0xff56 // Clip Start (PageDown)",
+                "B2": "0xff55 // Clip End (PageUp)",
+                "B3": "0xff9f // Zoom-to-Fit Clips (Del / . - [NumPad])"
+            }
         }
     ]
 }
