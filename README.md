@@ -37,6 +37,8 @@ Buttons layout on the Contour Design Shuttle Pro v2:
             B1            B4
 
 ```
+#### N.B. Contour Design Shuttle Pro v1 has the same buttons layout 
+
 
 ### Slow Jog
 
@@ -95,6 +97,17 @@ With:
 
     sudo shuttle-go /dev/input/by-id/usb-Contour_Design_ShuttlePRO_v2-event-if00
 
+### For ShuttlePRO_v1
+    shuttle-go /dev/input/by-id/usb-Contour_Design_ShuttlePRO-event-if00
+
+#### N.B. Running shuttle-go as sudo will cause shuttle-go to look for a valid config file in 
+
+    /root/.shuttle-go.json
+
+#### Without sudo, shuttle-go will look for a valid config file in the current user's home dir
+
+    ~/.shuttle-go.json 
+        
 
 ## Install in `udev` with:
 
@@ -102,6 +115,11 @@ With:
 
     ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO v2", MODE="0644"
     ACTION=="remove", ATTRS{name}=="Contour Design ShuttlePRO v2", RUN+="/usr/bin/pkill shuttle-go"
+
+### For ShuttlePRO_v1
+
+    ACTION=="add", ATTRS{name}=="Contour Design ShuttlePRO", MODE="0644"
+    ACTION=="remove", ATTRS{name}=="Contour Design ShuttlePRO", RUN+="/usr/bin/pkill shuttle-go"
 
 Then run, as **root**:
 
