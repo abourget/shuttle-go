@@ -16,8 +16,8 @@ var shuttleKeys = map[string]int{
 	"B2": 265,
 	"B3": 266,
 	"B4": 268,
-	"M1": 269,
-	"M2": 270,
+	"M1": 272,
+	"M2": 273,
 }
 
 var otherShuttleKeys = map[string]bool{
