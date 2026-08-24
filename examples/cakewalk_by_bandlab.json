@@ -1,0 +1,104 @@
+{
+    "apps": [
+        {
+            "name": "Cakewalk by BandLab",
+            "match_window_titles": [
+                "Cakewalk by BandLab",
+                "Cakewalk"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "B1": {
+                    "key": "Shift+&",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Arrow Up"
+                },
+                "B3": {
+                    "key": "Shift+(",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Arrow Down"
+                },
+                "B4": {
+                    "key": "Alt+I",
+                    "comment": "Insert"
+                },
+                "M1": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Edit|Redo"
+                },
+                "M2": {
+                    "key": "Ctrl+S",
+                    "comment": "Save"
+                },
+                "F2": {
+                    "key": "space",
+                    "comment": "PLAY/STOP"
+                },
+                "F4": {
+                    "key": "R",
+                    "comment": "RECORD"
+                },
+                "F5": {
+                    "key": "Ctrl+Z",
+                    "comment": "Edit|Undo"
+                },
+                "F6": {
+                    "key": "Shift+%",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Arrow Left"
+                },
+                "F7": {
+                    "key": "Shift+'",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Arrow Right"
+                },
+                "F8": {
+                    "key": "Ctrl+Shift+!",
+                    "comment": "Go|Previous Measure"
+                },
+                "JogL": {
+                    "key": "Ctrl+Shift+!",
+                    "comment": "Jog By Measure Reverse"
+                },
+                "S-1": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 500,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-2": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 200,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-3": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 100,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-4": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 67,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-5": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 33,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-6": {
+                    "key": "Ctrl+Shift+!",
+                    "delay_ms": 22,
+                    "comment": "Scroll By Measure Reverse"
+                },
+                "S-7": {
+                    "key": "Ctrl+Shift+!",
+                    "comment": "Scroll By Measure Reverse"
+                }
+            }
+        }
+    ]
+}

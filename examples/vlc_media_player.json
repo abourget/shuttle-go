@@ -1,0 +1,91 @@
+{
+    "apps": [
+        {
+            "name": "VLC Media Player",
+            "match_window_titles": [
+                "VLC Media Player",
+                "vlc"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Move Left by Marker"
+                },
+                "B1": {
+                    "key": "M",
+                    "comment": "Mute"
+                },
+                "B2": {
+                    "key": "Ctrl+Shift+&",
+                    "comment": "Volume Up"
+                },
+                "B3": {
+                    "key": "Shift+M",
+                    "comment": "Go to DVD Menu"
+                },
+                "B4": {
+                    "key": "Ctrl+Shift+(",
+                    "comment": "Volume Down"
+                },
+                "M1": {
+                    "key": "Shift+Z",
+                    "comment": "Unzoom"
+                },
+                "M2": {
+                    "key": "Z",
+                    "comment": "Zoom"
+                },
+                "F2": {
+                    "key": "Ctrl+F",
+                    "comment": "Open Folder"
+                },
+                "F3": {
+                    "key": "Ctrl+I",
+                    "comment": "Media Info"
+                },
+                "F4": {
+                    "key": "Ctrl+E",
+                    "comment": "Effects and Filters"
+                },
+                "F5": {
+                    "key": "F",
+                    "comment": "Full Screen"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play / Pause"
+                },
+                "JogL": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Backward"
+                },
+                "JogR": {
+                    "key": "E",
+                    "comment": "One Frame Forward"
+                },
+                "S-1": "Shift+Shift+%",
+                "S-2": {
+                    "key": "Shift+Shift+%",
+                    "delay_ms": 22
+                },
+                "S-3": {
+                    "key": "Shift+Shift+%",
+                    "delay_ms": 22
+                },
+                "S-4": "Alt+Shift+%",
+                "S-5": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 22
+                },
+                "S-6": "Ctrl+Alt+Shift+%",
+                "S-7": {
+                    "key": "Ctrl+Alt+Shift+%",
+                    "delay_ms": 22
+                },
+                "S1": "Shift+(",
+                "S2": "Shift+("
+            }
+        }
+    ]
+}

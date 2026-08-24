@@ -1,0 +1,130 @@
+{
+    "apps": [
+        {
+            "name": "Avid Media Composer",
+            "match_window_titles": [
+                "Avid Media Composer",
+                "AvidMediaComposer"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Reverses previous action"
+                },
+                "B1": {
+                    "key": "D",
+                    "comment": "Clear in point"
+                },
+                "B2": {
+                    "key": "F",
+                    "comment": "Clear out point"
+                },
+                "B3": {
+                    "key": "T",
+                    "comment": "Mark Clip"
+                },
+                "M1": {
+                    "key": "I",
+                    "comment": "Set in point"
+                },
+                "M2": {
+                    "key": "O",
+                    "comment": "Set out point"
+                },
+                "F2": {
+                    "key": "Ctrl+R",
+                    "comment": "Repeates previous action"
+                },
+                "F3": {
+                    "key": "B",
+                    "comment": "Overwrite edit"
+                },
+                "F4": {
+                    "key": "H",
+                    "comment": "Insert edit"
+                },
+                "F5": {
+                    "key": "A",
+                    "comment": "Previous Edit"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Reverse Play"
+                },
+                "F7": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "L",
+                    "comment": "Forward Play"
+                },
+                "F9": {
+                    "key": "S",
+                    "comment": "Next edit"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "J",
+                    "comment": "Reverse Play (30 fps.)"
+                },
+                "S-3": {
+                    "key": "J",
+                    "comment": "Reverse Play times 2 (60 fps.)"
+                },
+                "S-4": {
+                    "key": "J",
+                    "comment": "Reverse Play times 3 (90 fps.)"
+                },
+                "S-5": {
+                    "key": "J",
+                    "comment": "Reverse Play times 5 (150 fps.)"
+                },
+                "S-6": {
+                    "key": "J",
+                    "comment": "Reverse Play times 8 (240 fps.)"
+                },
+                "S-7": {
+                    "key": "J",
+                    "comment": "Reverse Play times 8 (240 fps.)"
+                },
+                "S0": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "S1": {
+                    "key": "L",
+                    "comment": "Forward Play (30 fps)"
+                },
+                "S3": {
+                    "key": "L",
+                    "comment": "Forward Play times 2 (60 fps)"
+                },
+                "S4": {
+                    "key": "L",
+                    "comment": "Forward Play times 3 (90 fps.)"
+                },
+                "S5": {
+                    "key": "L",
+                    "comment": "Forward Play times 5 (150 fps)"
+                },
+                "S6": {
+                    "key": "L",
+                    "comment": "Forward Play times 8 (240 fps)"
+                },
+                "S7": {
+                    "key": "L",
+                    "comment": "Forward Play times 8 (240 fps)"
+                }
+            }
+        }
+    ]
+}

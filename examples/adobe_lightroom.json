@@ -1,0 +1,74 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Lightroom",
+            "match_window_titles": [
+                "Adobe Lightroom",
+                "lightroom"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+Shift+I",
+                    "comment": "Import Photos from Disk"
+                },
+                "B2": {
+                    "key": "Y",
+                    "comment": "View Before/After Right/Left"
+                },
+                "B4": {
+                    "key": "L",
+                    "comment": "Cycle Lights Out Mode"
+                },
+                "M1": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "F2": {
+                    "key": "Ctrl+Shift+E",
+                    "comment": "Export Selected Photo"
+                },
+                "F3": {
+                    "key": "Ctrl+E",
+                    "comment": "Export to Photoshop"
+                },
+                "F4": {
+                    "key": "Ctrl+Shift+F",
+                    "comment": "Full/Normal Screen Mode"
+                },
+                "F5": {
+                    "key": "Ctrl+U",
+                    "comment": "Auto Tone"
+                },
+                "F6": {
+                    "key": "Ctrl+Shift+U",
+                    "comment": "Auto White Balance"
+                },
+                "F7": {
+                    "key": "Ctrl+Shift+N",
+                    "comment": "Create New Preset"
+                },
+                "F8": {
+                    "key": "Ctrl+L",
+                    "comment": "Toggle Filters On/Off"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+R",
+                    "comment": "Reset All Settings"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Previous Photo"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Next Photo"
+                }
+            }
+        }
+    ]
+}

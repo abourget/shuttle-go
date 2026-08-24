@@ -1,0 +1,44 @@
+{
+    "apps": [
+        {
+            "name": "Microsoft PowerPoint",
+            "match_window_titles": [
+                "Microsoft PowerPoint",
+                "POWERPNT"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste cut or copied object"
+                },
+                "B2": {
+                    "key": "F5",
+                    "comment": "Run a presentation"
+                },
+                "F2": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy selected object"
+                },
+                "F3": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo or repeat an action"
+                },
+                "F4": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo the last action"
+                },
+                "F8": {
+                    "key": "Ctrl+D",
+                    "comment": "Make a copy of the slide"
+                },
+                "F9": {
+                    "key": "Ctrl+M",
+                    "comment": "Insert a new slide"
+                },
+                "JogL": "Shift+&",
+                "JogR": "Shift+("
+            }
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "apps": [
+        {
+            "name": "Ableton Live",
+            "match_window_titles": [
+                "Ableton Live"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "New Live Set"
+                },
+                "B1": {
+                    "key": "Ctrl+Shift+T",
+                    "comment": "Insert MIDI Track"
+                },
+                "B2": {
+                    "key": "Z",
+                    "comment": "Full Screen"
+                },
+                "B4": {
+                    "key": "space",
+                    "comment": "Stop/Start"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+I",
+                    "comment": "Insert Scene"
+                },
+                "F3": {
+                    "key": "Ctrl+Shift+I",
+                    "comment": "Capture and Insert Scene"
+                },
+                "F4": {
+                    "key": "Ctrl+T",
+                    "comment": "Insert Audio Track"
+                },
+                "F5": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F6": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F7": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "F8": {
+                    "key": "Ctrl+Shift+F",
+                    "comment": "Follow"
+                },
+                "F9": {
+                    "key": "B",
+                    "comment": "Draw Mode"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Jog Left"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Jog Right"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Shuttle Left"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Shuttle Left"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Shuttle Left"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Shuttle Left"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Shuttle Left"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Left"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Shuttle Left"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Shuttle Right"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Shuttle Right"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Shuttle Right"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Shuttle Right"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Shuttle Right"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Right"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Shuttle Right"
+                }
+            }
+        }
+    ]
+}

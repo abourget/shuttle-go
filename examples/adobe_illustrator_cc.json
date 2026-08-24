@@ -1,0 +1,142 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Illustrator CC",
+            "match_window_titles": [
+                "Adobe Illustrator CC",
+                "Illustrator"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Shift+.",
+                    "comment": "delete?"
+                },
+                "B1": {
+                    "key": "P",
+                    "comment": "Pen Tool"
+                },
+                "B2": {
+                    "key": "Ctrl+Shift+E",
+                    "comment": "Apply last effect"
+                },
+                "B3": {
+                    "key": "T",
+                    "comment": "Text Tool"
+                },
+                "B4": {
+                    "key": "Ctrl+Alt+Shift+E",
+                    "comment": "Last effect"
+                },
+                "M1": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Re-do"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Un-do"
+                },
+                "F2": {
+                    "key": "Ctrl+S",
+                    "comment": "File save"
+                },
+                "F3": {
+                    "key": "Ctrl+Shift+S",
+                    "comment": "File save as"
+                },
+                "F4": {
+                    "key": "Ctrl+N",
+                    "comment": "File new"
+                },
+                "F6": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F7": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F8": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Move selection left"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Move selection right"
+                },
+                "S-1": {
+                    "key": "Shift+&",
+                    "comment": "Move selection up"
+                },
+                "S-2": {
+                    "key": "Shift+&",
+                    "delay_ms": 500,
+                    "comment": "Move selection up"
+                },
+                "S-3": {
+                    "key": "Shift+&",
+                    "delay_ms": 200,
+                    "comment": "Move selection up"
+                },
+                "S-4": {
+                    "key": "Shift+Shift+&",
+                    "delay_ms": 500,
+                    "comment": "Move selection up"
+                },
+                "S-5": {
+                    "key": "Shift+Shift+&",
+                    "delay_ms": 200,
+                    "comment": "Move selection up"
+                },
+                "S-6": {
+                    "key": "Shift+Shift+&",
+                    "delay_ms": 100,
+                    "comment": "Move selection up"
+                },
+                "S-7": {
+                    "key": "Shift+Shift+&",
+                    "delay_ms": 67,
+                    "comment": "Move selection up"
+                },
+                "S1": {
+                    "key": "Shift+(",
+                    "comment": "Move selection down"
+                },
+                "S2": {
+                    "key": "Shift+(",
+                    "delay_ms": 500,
+                    "comment": "Move selection down"
+                },
+                "S3": {
+                    "key": "Shift+(",
+                    "delay_ms": 200,
+                    "comment": "Move selection down"
+                },
+                "S4": {
+                    "key": "Shift+Shift+(",
+                    "delay_ms": 500,
+                    "comment": "Move selection down"
+                },
+                "S5": {
+                    "key": "Shift+Shift+(",
+                    "delay_ms": 200,
+                    "comment": "Move selection down"
+                },
+                "S6": {
+                    "key": "Shift+Shift+(",
+                    "delay_ms": 100,
+                    "comment": "Move selection down"
+                },
+                "S7": {
+                    "key": "Shift+Shift+(",
+                    "delay_ms": 67,
+                    "comment": "Move selection down"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "apps": [
+        {
+            "name": "Bitwig Studio",
+            "match_window_titles": [
+                "Bitwig Studio"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "B1": {
+                    "key": "Ctrl+0",
+                    "comment": "Zoom to Fit"
+                },
+                "B2": {
+                    "key": "I",
+                    "comment": "Show/Hide Inspector Panel"
+                },
+                "B4": {
+                    "key": "M",
+                    "comment": "Show/Hide Mixer Panel"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "A",
+                    "comment": "Show/Hide Automation Panel"
+                },
+                "F3": {
+                    "key": "D",
+                    "comment": "Show/Hide Device Panel"
+                },
+                "F4": {
+                    "key": "E",
+                    "comment": "Show/Hide Editing Panel"
+                },
+                "F5": {
+                    "key": "Ctrl+T",
+                    "comment": "Create Instrument Track"
+                },
+                "F6": {
+                    "key": "Ctrl+Shift+T",
+                    "comment": "Create Audio Track"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Stop"
+                },
+                "F9": {
+                    "key": "Ctrl+Alt+T",
+                    "comment": "Create Effect Track"
+                }
+            }
+        }
+    ]
+}

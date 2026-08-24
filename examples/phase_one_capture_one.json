@@ -1,0 +1,90 @@
+{
+    "apps": [
+        {
+            "name": "Phase One Capture One",
+            "match_window_titles": [
+                "Phase One Capture One",
+                "CaptureOne"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+Shift+N",
+                    "comment": "New Catalog"
+                },
+                "B1": {
+                    "key": "Ctrl+Alt+L",
+                    "comment": "Rotate Left"
+                },
+                "B2": {
+                    "key": "Z",
+                    "comment": "Full Screen"
+                },
+                "B3": {
+                    "key": "Ctrl+Alt+R",
+                    "comment": "Rotate Right"
+                },
+                "B4": {
+                    "key": "Ctrl+0",
+                    "comment": "To Fit"
+                },
+                "M1": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "F2": {
+                    "key": "Ctrl+B",
+                    "comment": "Show/Hide Browser"
+                },
+                "F3": {
+                    "key": "Ctrl+Alt+V",
+                    "comment": "Show/Hide Viewer"
+                },
+                "F4": {
+                    "key": "Ctrl+T",
+                    "comment": "Show/Hide Tools"
+                },
+                "F5": {
+                    "key": "Shift+K",
+                    "comment": "Increase Kelvin"
+                },
+                "F6": {
+                    "key": "Shift+M",
+                    "comment": "Decrease Kelvin"
+                },
+                "F7": {
+                    "key": "Ctrl+R",
+                    "comment": "Reset"
+                },
+                "F8": {
+                    "key": "Ctrl+Alt+K",
+                    "comment": "Increase Saturation"
+                },
+                "F9": {
+                    "key": "Ctrl+Alt+M",
+                    "comment": "Decrease Saturation"
+                },
+                "JogL": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom Out"
+                },
+                "JogR": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom In"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Previous Photo"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Next Photo"
+                }
+            }
+        }
+    ]
+}

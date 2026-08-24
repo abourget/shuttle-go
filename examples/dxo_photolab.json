@@ -1,0 +1,90 @@
+{
+    "apps": [
+        {
+            "name": "DxO PhotoLab",
+            "match_window_titles": [
+                "DxO PhotoLab",
+                "DxO.PhotoLab"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "X",
+                    "comment": "Show/Hide All Pallettes"
+                },
+                "B1": {
+                    "key": "Ctrl+L",
+                    "comment": "Rotate Left"
+                },
+                "B2": {
+                    "key": "Ctrl+R",
+                    "comment": "Rotate Right"
+                },
+                "B3": {
+                    "key": "Ctrl+P",
+                    "comment": "Go to Organize"
+                },
+                "B4": {
+                    "key": "Ctrl+Q",
+                    "comment": "Go to Customize"
+                },
+                "M1": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "F2": {
+                    "key": "Ctrl+Alt+P",
+                    "comment": "Export Selected Photo"
+                },
+                "F3": {
+                    "key": "Ctrl+J",
+                    "comment": "Create Virtual Copy"
+                },
+                "F4": {
+                    "key": "Z",
+                    "comment": "Full  Mode"
+                },
+                "F5": {
+                    "key": "Ctrl+H",
+                    "comment": "Show/Hide Info Overlay"
+                },
+                "F6": {
+                    "key": "Ctrl+G",
+                    "comment": "Show Hide Grid Overlay"
+                },
+                "F7": {
+                    "key": "Ctrl+U",
+                    "comment": "Dock/Undock Image Browser"
+                },
+                "F8": {
+                    "key": "Ctrl+I",
+                    "comment": "Image Properties"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+C",
+                    "comment": "Copy Correction Settings"
+                },
+                "JogL": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom Out"
+                },
+                "JogR": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom In"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Previous Photo"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Next Photo"
+                }
+            }
+        }
+    ]
+}

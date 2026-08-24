@@ -1,6 +1,10 @@
 package main
 
-import "strings"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
 
 var shuttleKeys = map[string]int{
 	"F1": 256,
@@ -18,6 +22,21 @@ var shuttleKeys = map[string]int{
 	"B4": 268,
 	"M1": 269,
 	"M2": 270,
+	"M3": 272,
+	"M4": 273,
+}
+
+// mToM1M2 remaps the M3/M4 button codes (272/273, as reported by some Shuttle
+// Pro variants) onto the M1/M2 codes (269/270). The two variants never report
+// both at once, so a config written with M1/M2 fires identically for either.
+func mToM1M2(code int) int {
+	switch code {
+	case 272:
+		return 269
+	case 273:
+		return 270
+	}
+	return code
 }
 
 var otherShuttleKeys = map[string]bool{
@@ -91,11 +110,36 @@ var keyboardKeys = map[string]int{
 	"Apostrophe": 40,
 	"'":          40,
 	"Grave":      41,
+	"`":          41,
 	"LeftShift":  42,
 	"Shift":      42,
 	"Backslash":  43,
 	"\\":         43,
 	"Z":          44,
+
+	// Raw symbol keys. These are the shifted forms of the base keys above
+	// (e.g. "5" shifted is "%", "7" shifted is "&"), so their keycodes match
+	// the base key and a binding writes them as "Shift+<symbol>". The named
+	// aliases for these (Percent, Ampersand, ...) were removed in favor of the
+	// literal symbol, which is more readable in a config.
+	"!":          11, // 0
+	"@":          2,  // 1
+	"#":          3,  // 2
+	"$":          4,  // 3
+	"%":          5,  // 4
+	"^":          6,  // 5
+	"&":          7,  // 6
+	"*":          8,  // 7
+	"(":          9,  // 8
+	")":          10, // 9
+	"_":          12, // -
+	"+":          13, // =
+	"|":          43, // \
+	":":          39, // ;
+	"<":          51, // ,
+	">":          52, // .
+	"?":          53, // /
+	"~":          41, // `
 	"X":          45,
 	"C":          46,
 	"V":          47,
@@ -111,7 +155,6 @@ var keyboardKeys = map[string]int{
 	"RightShift": 54,
 	"RShift":     54,
 	"KPAsterisk": 55,
-	"*":          55,
 	"LeftAlt":    56,
 	"Alt":        56,
 	"Space":      57,
@@ -231,9 +274,7 @@ var keyboardKeys = map[string]int{
 	"ScrollUp":        177,
 	"ScrollDown":      178,
 	"KPLeftParen":     179,
-	"(":               179,
 	"KPRightParen":    180,
-	")":               180,
 	"New":             181, /*AcNew*/
 	"Redo":            182, /*AcRedo/Repeat*/
 	"F13":             183,
@@ -299,4 +340,89 @@ func init() {
 	for k, v := range otherShuttleKeys {
 		otherShuttleKeysUpper[strings.ToUpper(k)] = v
 	}
+}
+
+// keyCode translates a single key name to a Linux input keycode.
+// Accepts either a hex keycode ("0xff51") or a name from keyboardKeys ("S", "Enter", ...).
+func keyCode(key string) (int, error) {
+	if strings.HasPrefix(key, "0x") {
+		code, err := strconv.ParseInt(key, 0, 32)
+		if err != nil {
+			return 0, fmt.Errorf("invalid hex keycode %q: %s", key, err)
+		}
+		return int(code), nil
+	}
+	if code, ok := keyboardKeysUpper[strings.ToUpper(key)]; ok {
+		return code, nil
+	}
+	return 0, fmt.Errorf("unknown key %q (use a keyboardKeys name or a 0x keycode)", key)
+}
+
+// keyCodes translates a config value that may contain "+"-separated keys
+// (e.g. "Shift+Tab") into a slice of Linux input keycodes, preserving order.
+func keyCodes(value string) ([]int, error) {
+	parts := strings.Split(value, "+")
+	codes := make([]int, len(parts))
+	for i, part := range parts {
+		code, err := keyCode(strings.TrimSpace(part))
+		if err != nil {
+			return nil, err
+		}
+		codes[i] = code
+	}
+	return codes, nil
+}
+
+// runeKeyCode maps a rune to the EV_KEY code that types it, and whether Shift
+// must be held to produce that character. It is used by the /type macro to emit
+// text. Letters and unshifted symbols map directly; shifted symbols (e.g. '!',
+// '@', '~') map to their base key with shift required. Space and the common
+// printable ASCII are all covered.
+func runeKeyCode(r rune) (code int, shift bool, err error) {
+	if m, ok := runeKeyMap[r]; ok {
+		return m.code, m.shift, nil
+	}
+	return 0, false, fmt.Errorf("no keycode for rune %q", r)
+}
+
+type runeKey struct {
+	code  int
+	shift bool
+}
+
+// runeKeyMap covers printable US-QWERTY ASCII. Letters/digits/space map to
+// their own key; symbols that need Shift map to the base key with shift set.
+var runeKeyMap = map[rune]runeKey{
+	'a': {30, false}, 'b': {31, false}, 'c': {46, false}, 'd': {32, false},
+	'e': {18, false}, 'f': {33, false}, 'g': {34, false}, 'h': {35, false},
+	'i': {23, false}, 'j': {36, false}, 'k': {37, false}, 'l': {38, false},
+	'm': {50, false}, 'n': {49, false}, 'o': {24, false}, 'p': {25, false},
+	'q': {16, false}, 'r': {19, false}, 's': {31, false}, 't': {20, false},
+	'u': {22, false}, 'v': {47, false}, 'w': {17, false}, 'x': {45, false},
+	'y': {21, false}, 'z': {44, false},
+	'A': {30, true}, 'B': {31, true}, 'C': {46, true}, 'D': {32, true},
+	'E': {18, true}, 'F': {33, true}, 'G': {34, true}, 'H': {35, true},
+	'I': {23, true}, 'J': {36, true}, 'K': {37, true}, 'L': {38, true},
+	'M': {50, true}, 'N': {49, true}, 'O': {24, true}, 'P': {25, true},
+	'Q': {16, true}, 'R': {19, true}, 'S': {31, true}, 'T': {20, true},
+	'U': {22, true}, 'V': {47, true}, 'W': {17, true}, 'X': {45, true},
+	'Y': {21, true}, 'Z': {44, true},
+	'1': {2, false}, '2': {3, false}, '3': {4, false}, '4': {5, false},
+	'5': {6, false}, '6': {7, false}, '7': {8, false}, '8': {9, false},
+	'9': {10, false}, '0': {11, false},
+	'!': {11, true}, '@': {2, true}, '#': {3, true}, '$': {4, true},
+	'%': {5, true}, '^': {6, true}, '&': {7, true}, '*': {8, true},
+	'(': {9, true}, ')': {10, true},
+	'-': {12, false}, '_': {12, true},
+	'=': {13, false}, '+': {13, true},
+	'[': {26, false}, '{': {26, true},
+	']': {27, false}, '}': {27, true},
+	'\\': {43, false}, '|': {43, true},
+	';': {39, false}, ':': {39, true},
+	'\'': {40, false}, '"': {40, true},
+	',': {51, false}, '<': {51, true},
+	'.': {52, false}, '>': {52, true},
+	'/': {53, false}, '?': {53, true},
+	'`': {41, false}, '~': {41, true},
+	' ': {57, false},
 }

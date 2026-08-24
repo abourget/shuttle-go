@@ -1,0 +1,144 @@
+{
+    "apps": [
+        {
+            "name": "MS Windows Media Player",
+            "match_window_titles": [
+                "MS Windows Media Player",
+                "wmplayer"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "V",
+                    "comment": "Mute the volume"
+                },
+                "B1": {
+                    "key": "Ctrl+1",
+                    "comment": "Full Mode"
+                },
+                "B2": {
+                    "key": "X",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Volume up"
+                },
+                "B3": {
+                    "key": "Ctrl+2",
+                    "comment": "Skin Mode"
+                },
+                "B4": {
+                    "key": "W",
+                    "repeat": 5,
+                    "delay_ms": 1000,
+                    "comment": "Volume Down"
+                },
+                "F2": {
+                    "key": "Ctrl+W",
+                    "comment": "Close"
+                },
+                "F3": {
+                    "key": "Ctrl+U",
+                    "comment": "Open a URL"
+                },
+                "F4": {
+                    "key": "Ctrl+O",
+                    "comment": "Open"
+                },
+                "F5": {
+                    "key": "Ctrl+T",
+                    "comment": "Repeat"
+                },
+                "F6": {
+                    "key": "Ctrl+Shift+B",
+                    "comment": "Rewind"
+                },
+                "F7": {
+                    "key": "Ctrl+S",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "Ctrl+P",
+                    "comment": "Play/Pause"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+F",
+                    "comment": "Fast Forward"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Jog Back"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Jog Forward"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Scrub Back"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Scrub Back"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Scrub Back"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Scrub Back"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Scrub Back"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Scrub Back"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "comment": "Scrub Back"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Scrub Forward"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Scrub Forward"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Scrub Forward"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Scrub Forward"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Scrub Forward"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Scrub Forward"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "comment": "Scrub Forward"
+                }
+            }
+        }
+    ]
+}

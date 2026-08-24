@@ -1,0 +1,79 @@
+{
+    "apps": [
+        {
+            "name": "MAGIX Movie Edit - Video Deluxe",
+            "match_window_titles": [
+                "MAGIX Movie Edit - Video Deluxe",
+                "MovieStudio"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Shift+Q",
+                    "comment": "Go to previous object"
+                },
+                "B1": {
+                    "key": "I",
+                    "comment": "Set range start"
+                },
+                "B2": {
+                    "key": "O",
+                    "comment": "Set range end"
+                },
+                "B3": {
+                    "key": "Shift+I",
+                    "comment": "Jump to range start"
+                },
+                "B4": {
+                    "key": "Shift+O",
+                    "comment": "Jump to range end"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Restore"
+                },
+                "F2": {
+                    "key": "Shift+W",
+                    "comment": "Go to next object"
+                },
+                "F3": {
+                    "key": "Q",
+                    "comment": "Go to left marker"
+                },
+                "F4": {
+                    "key": "W",
+                    "comment": "Go to right marker"
+                },
+                "F5": {
+                    "key": "T",
+                    "comment": "Split"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Reverse play"
+                },
+                "F7": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "L",
+                    "comment": "Forward Play"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S0": "K"
+            }
+        }
+    ]
+}

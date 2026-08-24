@@ -1,0 +1,101 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Photoshop CC",
+            "match_window_titles": [
+                "Adobe Photoshop CC",
+                "Photoshop"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+O",
+                    "comment": "File open"
+                },
+                "B1": {
+                    "key": "Ctrl+L",
+                    "comment": "Adjust levels"
+                },
+                "B2": {
+                    "key": "Ctrl+M",
+                    "comment": "Adjust curves"
+                },
+                "B3": {
+                    "key": "Ctrl+B",
+                    "comment": "Color balance"
+                },
+                "B4": {
+                    "key": "Ctrl+U",
+                    "comment": "Hue saturation"
+                },
+                "M1": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Step Forward"
+                },
+                "M2": {
+                    "key": "Ctrl+Alt+Z",
+                    "comment": "Step Backward"
+                },
+                "F2": {
+                    "key": "Ctrl+S",
+                    "comment": "File save"
+                },
+                "F3": {
+                    "key": "Ctrl+Shift+S",
+                    "comment": "Save copy as"
+                },
+                "F4": {
+                    "key": "Ctrl+N",
+                    "comment": "File new"
+                },
+                "F6": {
+                    "key": "Ctrl+T",
+                    "comment": "Free transform"
+                },
+                "F7": {
+                    "key": "Ctrl+P",
+                    "comment": "Print"
+                },
+                "F8": {
+                    "key": "Ctrl+D",
+                    "comment": "De-select"
+                },
+                "S-1": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 500,
+                    "comment": "Scroll up"
+                },
+                "S-2": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 200,
+                    "comment": "Scroll up"
+                },
+                "S-3": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 100,
+                    "comment": "Scroll up"
+                },
+                "S-4": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 67,
+                    "comment": "Scroll up"
+                },
+                "S-5": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 33,
+                    "comment": "Scroll up"
+                },
+                "S-6": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 22,
+                    "comment": "Scroll up"
+                },
+                "S-7": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 17,
+                    "comment": "Scroll up"
+                }
+            }
+        }
+    ]
+}

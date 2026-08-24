@@ -16,7 +16,9 @@ func listenOSCFeedback() {
 		return
 	}
 
-	fmt.Println("Listening on :8000 for incoming OSC feedback")
+	if *debugMode {
+		fmt.Println("Listening on :8000 for incoming OSC feedback")
+	}
 	err = (&osc.Server{
 		Addr:       "127.0.0.1:8000",
 		Dispatcher: d,

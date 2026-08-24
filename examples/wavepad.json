@@ -1,0 +1,147 @@
+{
+    "apps": [
+        {
+            "name": "WavePad",
+            "match_window_titles": [
+                "WavePad"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "New File"
+                },
+                "B1": {
+                    "key": "Ctrl+Shift+P",
+                    "comment": "Peak Finder"
+                },
+                "B2": {
+                    "key": "Ctrl+T",
+                    "comment": "Trim"
+                },
+                "B3": {
+                    "key": "Ctrl+Shift+D",
+                    "comment": "Split"
+                },
+                "B4": {
+                    "key": "Ctrl+R",
+                    "comment": "New Region"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+S",
+                    "comment": "Save File"
+                },
+                "F3": {
+                    "key": "T",
+                    "comment": "Record"
+                },
+                "F4": {
+                    "key": "Shift+X",
+                    "comment": "Loop Play"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Go to Home"
+                },
+                "F6": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom out"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Stop"
+                },
+                "F8": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom in"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Go to End"
+                },
+                "JogL": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Jog Left"
+                },
+                "JogR": {
+                    "key": "Alt+Shift+'",
+                    "comment": "Jog Right"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Rewind"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Rewind"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Rewind"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Rewind"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Rewind"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "delay_ms": 17,
+                    "comment": "Rewind"
+                },
+                "S1": {
+                    "key": "Z",
+                    "comment": "Forward Play 1/2x"
+                },
+                "S2": {
+                    "key": "Y",
+                    "comment": "Forward Play"
+                },
+                "S3": {
+                    "key": "F12",
+                    "comment": "Forward Play 2x"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward Play"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward Play"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward Play"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "delay_ms": 17,
+                    "comment": "Forward Play"
+                }
+            }
+        }
+    ]
+}

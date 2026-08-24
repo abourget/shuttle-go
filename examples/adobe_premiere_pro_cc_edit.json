@@ -1,0 +1,136 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Premiere Pro CC (Edit)",
+            "match_window_titles": [
+                "Adobe Premiere Pro CC (Edit)",
+                "Adobe Premiere Pro"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "B1": {
+                    "key": "Ctrl+Shift+I",
+                    "comment": "Clear in point/marker"
+                },
+                "B2": {
+                    "key": "Ctrl+Shift+O",
+                    "comment": "Clear out point/marker"
+                },
+                "B3": {
+                    "key": "T",
+                    "comment": "Trim"
+                },
+                "M1": {
+                    "key": "I",
+                    "comment": "Set in point/marker"
+                },
+                "M2": {
+                    "key": "O",
+                    "comment": "Set out point/marker"
+                },
+                "F2": {
+                    "key": "Ctrl+D",
+                    "comment": "Default Transition"
+                },
+                "F5": {
+                    "key": "Shift+&",
+                    "comment": "Go to Previous Edit"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Reverse Play"
+                },
+                "F7": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "L",
+                    "comment": "Forward Play"
+                },
+                "F9": {
+                    "key": "Shift+(",
+                    "comment": "Go to next edit"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Reverse 5 frames per sec."
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Reverse 10 frames per sec."
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Reverse 15 frames per sec."
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Reverse 30 frames per sec."
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Reverse 45 frames per sec."
+                },
+                "S-6": {
+                    "key": "Shift+Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind"
+                },
+                "S-7": {
+                    "key": "Shift+Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward 5 frames per sec."
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward 10 frames per sec."
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward 15 frames per sec."
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward 30 frames per sec."
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward 45 frames per sec."
+                },
+                "S6": {
+                    "key": "Shift+Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Fast Forward"
+                },
+                "S7": {
+                    "key": "Shift+Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Fast Forward"
+                }
+            }
+        }
+    ]
+}

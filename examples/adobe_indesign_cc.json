@@ -1,0 +1,67 @@
+{
+    "apps": [
+        {
+            "name": "Adobe InDesign CC",
+            "match_window_titles": [
+                "Adobe InDesign CC",
+                "InDesign"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "V",
+                    "comment": "Selection Tool"
+                },
+                "B1": {
+                    "key": "Ctrl+G",
+                    "comment": "Group Objects"
+                },
+                "B2": {
+                    "key": "Ctrl+L",
+                    "comment": "Lock Objects"
+                },
+                "B3": {
+                    "key": "Ctrl+Shift+G",
+                    "comment": "Ungroup Objects"
+                },
+                "B4": {
+                    "key": "Ctrl+Alt+L",
+                    "comment": "Unlock All on Spread"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "A",
+                    "comment": "Direct Selection Tool"
+                },
+                "F3": {
+                    "key": "T",
+                    "comment": "Type Tool"
+                },
+                "F4": {
+                    "key": "P",
+                    "comment": "Pen Tool"
+                },
+                "F5": {
+                    "key": "Ctrl+S",
+                    "comment": "Save"
+                },
+                "S-6": {
+                    "key": "Shift+!",
+                    "comment": "Page Up 1x"
+                },
+                "S-7": {
+                    "key": "Shift+!",
+                    "delay_ms": 22,
+                    "comment": "Page Up 2x"
+                }
+            }
+        }
+    ]
+}

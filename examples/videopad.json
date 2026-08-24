@@ -1,0 +1,133 @@
+{
+    "apps": [
+        {
+            "name": "VideoPad",
+            "match_window_titles": [
+                "VideoPad"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+S",
+                    "comment": "Save File"
+                },
+                "B3": {
+                    "key": "Shift+L",
+                    "comment": "Split"
+                },
+                "B4": {
+                    "key": "Ctrl+Shift+L",
+                    "comment": "Subtitles"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F3": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F4": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "F5": {
+                    "key": "Ctrl+Shift+$",
+                    "comment": "Go to Start of clip"
+                },
+                "F7": {
+                    "key": "Ctrl+space",
+                    "comment": "Play/Stop Clip"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+#",
+                    "comment": "Go to End of Clip"
+                },
+                "JogL": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Jog Left"
+                },
+                "JogR": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Jog Right"
+                },
+                "S-1": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Reverse 5 frames per sec."
+                },
+                "S-2": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Reverse 10 frames per sec."
+                },
+                "S-3": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Reverse 15 frames per sec."
+                },
+                "S-4": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Reverse 30 frames per sec."
+                },
+                "S-5": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Reverse 45 frames per sec."
+                },
+                "S-6": {
+                    "key": "Ctrl+Shift+%",
+                    "delay_ms": 17,
+                    "comment": "Reverse 60 frames per sec."
+                },
+                "S-7": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Rewind"
+                },
+                "S1": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward 5 frames per sec."
+                },
+                "S2": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward 10 frames per sec."
+                },
+                "S3": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward 15 frames per sec."
+                },
+                "S4": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward 30 frames per sec."
+                },
+                "S5": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward 45 frames per sec."
+                },
+                "S6": {
+                    "key": "Ctrl+Shift+'",
+                    "delay_ms": 17,
+                    "comment": "Forward 60 frames per sec."
+                },
+                "S7": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward Play"
+                }
+            }
+        }
+    ]
+}

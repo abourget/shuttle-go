@@ -1,0 +1,146 @@
+{
+    "apps": [
+        {
+            "name": "Magix Sequoia",
+            "match_window_titles": [
+                "Magix Sequoia",
+                "Sequoia"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "W",
+                    "comment": "Open Audio files"
+                },
+                "B1": {
+                    "key": "Alt+S",
+                    "comment": "Solo selected track"
+                },
+                "B2": {
+                    "key": "Alt+R",
+                    "comment": "Record enabled selected track"
+                },
+                "B3": {
+                    "key": "Alt+M",
+                    "comment": "Mute selected track"
+                },
+                "B4": {
+                    "key": "Shift+I",
+                    "comment": "Track info dialog (track setup)"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "UNDO"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "REDO"
+                },
+                "F2": {
+                    "key": "Ctrl+S",
+                    "comment": "Save project (VIP)"
+                },
+                "F3": {
+                    "key": "Ctrl+Shift+T",
+                    "comment": "Open/Close Transport"
+                },
+                "F4": {
+                    "key": "M",
+                    "comment": "Open/Close Mixer"
+                },
+                "F5": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "hor. Zoom Out Cursor Position"
+                },
+                "F6": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "hor. Zoom In Cursor Position"
+                },
+                "F9": {
+                    "key": "space",
+                    "comment": "Play/Stop"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Jog Left"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Jog Right"
+                },
+                "S-1": {
+                    "key": "Alt+Shift+Shift+%",
+                    "comment": "Jog Left"
+                },
+                "S-2": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Jog Left"
+                },
+                "S-3": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Jog Left"
+                },
+                "S-4": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Jog Left"
+                },
+                "S-5": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Jog Left"
+                },
+                "S-6": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Jog Left"
+                },
+                "S-7": {
+                    "key": "Alt+Shift+Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Jog Left"
+                },
+                "S0": {
+                    "key": "Alt+Shift+Shift+(",
+                    "comment": "Stop Scrubbing"
+                },
+                "S1": {
+                    "key": "Alt+Shift+Shift+'",
+                    "comment": "Jog Right"
+                },
+                "S2": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Jog Right"
+                },
+                "S3": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Jog Right"
+                },
+                "S4": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Jog Right"
+                },
+                "S5": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Jog Right"
+                },
+                "S6": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Jog Right"
+                },
+                "S7": {
+                    "key": "Alt+Shift+Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Jog Right"
+                }
+            }
+        }
+    ]
+}

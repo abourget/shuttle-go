@@ -7,9 +7,9 @@
             ],
             "slow_jog": 200,
             "bindings": {
-                "F1": "Escape // Switch viewer-recorder",
+                "F1": "Esc // Switch viewer-recorder",
                 "F2": "p  // Clear Marks",
-                "M1+F2": "Cyrillic_YA  // Swap In-Out Marks",
+                "M1+F2": ";  // Swap In-Out Marks",
 
                 "F3": "x  // Delete",
                 "M1+F3": "z  // Blackout",
@@ -44,11 +44,11 @@
                 "B2+F6": "J // Next Tile in Bin",
                 "B2+F7": "H // Load Tile into Viewer",
 
-                "B4+F5": "hebrew_lamed  // Live source 1",
-                "B4+F6": "hebrew_finalmem  // Live source 2",
-                "B4+F7": "hebrew_finalnun  // Live source 3",
-                "B4+F8": "hebrew_samech  // Live source 4",
-                "B4+F9": "hebrew_finalpe  // Live source 5",
+                "B4+F5": "l  // Live source 1",
+                "B4+F6": "c  // Live source 2",
+                "B4+F7": "n  // Live source 3",
+                "B4+F8": ";  // Live source 4",
+                "B4+F9": "p  // Live source 5",
 
                 "B1+F1": "1 // Toggle V1",
                 "B1+F2": "2 // Toggle V2",
@@ -60,10 +60,10 @@
                 "B1+F8": "6 // Toggle A4",
                 "B1+F9": "7 // Toggle A5",
 
-                "JogL": "parenleft",
-                "JogR": "parenright",
+                "JogL": "(",
+                "JogR": ")",
                 "SlowJogL": "comma",
-                "SlowJogR": "period",
+                "SlowJogR": ".",
                 "S-7": "Y",
                 "S-6": "T",
                 "S-5": "R",
@@ -86,6 +86,9 @@
             "match_window_titles": [
                 ".*OBS Studio.*"
             ],
+            "match_wm_class": [
+                "^obs$"
+            ],
             "slow_jog": 200,
             "driver": "exec",
             "bindings": {
@@ -107,7 +110,7 @@
             "bindings": {
                 "F1": "/access_action Transport/record-roll",
                 "F2": "/transport_stop + /sleep 0.25 + /access_action Editor/playhead-to-previous-region-boundary + /sleep 0.05 + /access_action Common/finish-range + /sleep 0.05 + /jump_seconds -0.1 + /sleep 0.05 + /access_action Common/start-range + /sleep 0.05 + /access_action Editor/editor-cut  # Stop recording and clear the last 0.05 second of recording (because it might catch the click of the Shuttle !)",
-                "M1+F2": "Cyrillic_YA  # Swap In-Out Marks",
+                "M1+F2": ";  # Swap In-Out Marks",
 
                 "F3": "/access_action Common/finish-range + /access_action Editor/playhead-to-range-start + /access_action Editor/editor-cut",
                 "M1+F3": "z  # Blackout",
@@ -151,10 +154,10 @@
                 "B1+F8": "6  # Toggle A4",
                 "B1+F9": "7  # Toggle A5",
 
-                "JogL": "parenleft",
-                "JogR": "parenright",
+                "JogL": "(",
+                "JogR": ")",
                 "SlowJogL": "comma",
-                "SlowJogR": "period",
+                "SlowJogR": ".",
                 "S-7": "/set_transport_speed -8.0",
                 "S-6": "/set_transport_speed -4.0",
                 "S-5": "/set_transport_speed -2.0",
@@ -195,6 +198,43 @@
                 "B1": "0xff56 // Clip Start (PageDown)",
                 "B2": "0xff55 // Clip End (PageUp)",
                 "B3": "0xff9f // Zoom-to-Fit Clips (Del / . - [NumPad])"
+            }
+        },
+        {
+            "name": "Macro sequence example",
+            "match_wm_class": [
+                "^Example$"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F5": [
+                    "/type hello world",
+                    "/sleep 1.5",
+                    "/type !!!",
+                    "/exec touch /tmp/shuttle-go-macro",
+                    "/mousemove 500 300 true",
+                    "/click left 4"
+                ],
+                "F6": {
+                    "once": true,
+                    "macros": [
+                        "/type one-shot: this runs a single time on press"
+                    ]
+                },
+                "F7": "a // Plain single-key binding still works alongside macros"
+            }
+        },
+        {
+            "name": "Repeat / delay example (object form)",
+            "match_wm_class": [
+                "^Repeat$"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "JogL": { "key": "(", "repeat": 5, "delay_ms": 1000, "comment": "One frame left" },
+                "JogR": { "key": ")", "repeat": 5, "delay_ms": 1000, "comment": "One frame right" },
+                "F1": { "key": "a", "repeat": 3, "delay_ms": 50, "start_delay_ms": 100, "comment": "Prev clip" },
+                "F2": "b // A plain string is still just a single tap"
             }
         }
     ]

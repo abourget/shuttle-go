@@ -1,0 +1,115 @@
+{
+    "apps": [
+        {
+            "name": "Microsoft Outlook",
+            "match_window_titles": [
+                "Microsoft Outlook",
+                "OUTLOOK"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+F",
+                    "comment": "Forward"
+                },
+                "B2": {
+                    "key": "Ctrl+Shift+B",
+                    "comment": "Display the Address Book"
+                },
+                "B3": {
+                    "key": "Alt+F4",
+                    "comment": "Quit"
+                },
+                "B4": {
+                    "key": "F7",
+                    "comment": "Check spelling"
+                },
+                "M1": {
+                    "key": "Ctrl+Shift+G",
+                    "comment": "Flag for follow up"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo/Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+Shift+R",
+                    "comment": "Reply all to a mail message"
+                },
+                "F3": {
+                    "key": "Ctrl+R",
+                    "comment": "Reply to a mail message"
+                },
+                "F4": {
+                    "key": "Ctrl+N",
+                    "comment": "Open a new message"
+                },
+                "F5": {
+                    "key": "Ctrl+Y",
+                    "comment": "Go to folder / Redo"
+                },
+                "F6": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F7": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "F8": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+F",
+                    "comment": "Use advanced Find"
+                },
+                "JogL": "Shift+!",
+                "S-1": "Shift+&",
+                "S-2": "Shift+&",
+                "S-3": {
+                    "key": "Shift+&",
+                    "delay_ms": 500
+                },
+                "S-4": {
+                    "key": "Shift+&",
+                    "delay_ms": 200
+                },
+                "S-5": {
+                    "key": "Shift+&",
+                    "delay_ms": 100
+                },
+                "S-6": {
+                    "key": "Shift+&",
+                    "delay_ms": 67
+                },
+                "S-7": {
+                    "key": "Shift+&",
+                    "delay_ms": 33
+                },
+                "S1": "Shift+(",
+                "S2": "Shift+(",
+                "S3": {
+                    "key": "Shift+(",
+                    "delay_ms": 500
+                },
+                "S4": {
+                    "key": "Shift+(",
+                    "delay_ms": 200
+                },
+                "S5": {
+                    "key": "Shift+(",
+                    "delay_ms": 100
+                },
+                "S6": {
+                    "key": "Shift+(",
+                    "delay_ms": 67
+                },
+                "S7": {
+                    "key": "Shift+(",
+                    "delay_ms": 33
+                }
+            }
+        }
+    ]
+}

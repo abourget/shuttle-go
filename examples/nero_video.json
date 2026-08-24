@@ -1,0 +1,146 @@
+{
+    "apps": [
+        {
+            "name": "Nero Video",
+            "match_window_titles": [
+                "Nero Video",
+                "NeroVideo"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Z",
+                    "comment": "Full screen mode"
+                },
+                "B1": {
+                    "key": "I",
+                    "comment": "Mark in"
+                },
+                "B2": {
+                    "key": "O",
+                    "comment": "Mark out"
+                },
+                "B3": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "B4": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M1": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom in"
+                },
+                "M2": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom out"
+                },
+                "F2": {
+                    "key": "Ctrl+S",
+                    "comment": "Save project"
+                },
+                "F3": {
+                    "key": "Ctrl+M",
+                    "comment": "Open Themes"
+                },
+                "F4": {
+                    "key": "Shift+.",
+                    "comment": "Delete the object"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Jump to first frame"
+                },
+                "F6": {
+                    "key": "Shift+!",
+                    "comment": "Jump to previous cut"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Pause"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Jump to last frame"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Reverse 5 frames per sec."
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Reverse 10 frames per sec."
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Reverse 15 frames per sec."
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Reverse 30 frames per sec."
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Reverse 45 frames per sec."
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 17,
+                    "comment": "Reverse 60 frames per sec."
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "comment": "Reverse"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward 5 frames per sec."
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward 10 frames per sec."
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward 15 frames per sec."
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward 30 frames per sec."
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward 45 frames per sec."
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 17,
+                    "comment": "Forward 60 frames per sec."
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "comment": "Fast Forward"
+                }
+            }
+        }
+    ]
+}

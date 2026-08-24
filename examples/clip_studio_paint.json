@@ -1,0 +1,66 @@
+{
+    "apps": [
+        {
+            "name": "Clip Studio Paint",
+            "match_window_titles": [
+                "Clip Studio Paint",
+                "CLIPStudioPaint"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+S",
+                    "comment": "File Save"
+                },
+                "B1": {
+                    "key": "P",
+                    "comment": "Pen/Pencil"
+                },
+                "B2": {
+                    "key": "B",
+                    "comment": "Brush/Airbrush/Decoration"
+                },
+                "B3": {
+                    "key": "U",
+                    "comment": "Figure"
+                },
+                "B4": {
+                    "key": "T",
+                    "comment": "Text"
+                },
+                "M1": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "F2": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F3": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F4": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "F6": {
+                    "key": "Ctrl+T",
+                    "comment": "Free transform"
+                },
+                "F7": {
+                    "key": "Ctrl+P",
+                    "comment": "Print"
+                },
+                "F8": {
+                    "key": "Ctrl+D",
+                    "comment": "De-select"
+                }
+            }
+        }
+    ]
+}

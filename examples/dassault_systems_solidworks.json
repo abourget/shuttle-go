@@ -1,0 +1,150 @@
+{
+    "apps": [
+        {
+            "name": "Dassault Systems SolidWorks",
+            "match_window_titles": [
+                "Dassault Systems SolidWorks",
+                "SLDWORKS"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+S",
+                    "comment": "File Save"
+                },
+                "B1": {
+                    "key": "Ctrl+5",
+                    "comment": "Top"
+                },
+                "B2": {
+                    "key": "Shift+Z",
+                    "comment": "Zoom In"
+                },
+                "B3": {
+                    "key": "Ctrl+6",
+                    "comment": "Bottom"
+                },
+                "B4": {
+                    "key": "Z",
+                    "comment": "Zoom Out"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "space",
+                    "comment": "Views"
+                },
+                "F2": {
+                    "key": "F",
+                    "comment": "Zoom to Fit"
+                },
+                "F3": {
+                    "key": "Ctrl+B",
+                    "comment": "Rebuild"
+                },
+                "F4": {
+                    "key": "Ctrl+R",
+                    "comment": "Redraw"
+                },
+                "F5": {
+                    "key": "Ctrl+1",
+                    "comment": "Front"
+                },
+                "F6": {
+                    "key": "Ctrl+3",
+                    "comment": "Left"
+                },
+                "F7": {
+                    "key": "Ctrl+8",
+                    "comment": "Normal To"
+                },
+                "F8": {
+                    "key": "Ctrl+4",
+                    "comment": "Right"
+                },
+                "F9": {
+                    "key": "Ctrl+2",
+                    "comment": "Back"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Left"
+                },
+                "JogR": {
+                    "key": "Shift+(",
+                    "comment": "Down"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Left"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Left 2x"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Zoom Out 5x"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Zoom Out 10x"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Zoom Out 15x"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Zoom Out 30x"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Zoom Out 45x"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Right"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Right 2x"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Right 5x"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Right 10x"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Right 15x"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Right 30x"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Right 45x"
+                }
+            }
+        }
+    ]
+}

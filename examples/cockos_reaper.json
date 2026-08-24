@@ -1,0 +1,140 @@
+{
+    "apps": [
+        {
+            "name": "Cockos REAPER",
+            "match_window_titles": [
+                "Cockos REAPER",
+                "reaper"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Shift+Shift+%",
+                    "comment": "Move/select Left"
+                },
+                "B1": {
+                    "key": "Ctrl+Alt+Shift+&",
+                    "comment": "Go to Previous Track"
+                },
+                "B2": {
+                    "key": "Ctrl+Alt+Shift+(",
+                    "comment": "Go to Next Track"
+                },
+                "B3": {
+                    "key": "Shift+T",
+                    "comment": "Switch to previous take"
+                },
+                "B4": {
+                    "key": "T",
+                    "comment": "Switch to next take"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Redo"
+                },
+                "F4": {
+                    "key": "Shift+Shift+'",
+                    "comment": "Move/Select Right"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Go to start of project"
+                },
+                "F6": {
+                    "key": "Ctrl+space",
+                    "comment": "Play/Pause"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "Shift+#",
+                    "comment": "Go to End of Project"
+                },
+                "F9": {
+                    "key": "Ctrl+R",
+                    "comment": "Record"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Rewind"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Rewind 1x"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Rewind 5x"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Rewind 10x"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Rewind 15x"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind 30x"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind 30x"
+                },
+                "S-7": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Rewind a little bit"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Fast Forward 1x"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Fast Forward 5x"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Fast Forward 10x"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Fast Forward 15x"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Fast Forward 30x"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Fast Forward 30x"
+                },
+                "S7": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Fast Forward A Little Bit"
+                }
+            }
+        }
+    ]
+}

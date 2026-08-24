@@ -1,0 +1,148 @@
+{
+    "apps": [
+        {
+            "name": "Mozilla Firefox",
+            "match_window_titles": [
+                "Mozilla Firefox",
+                "firefox"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "Open a new window"
+                },
+                "B1": {
+                    "key": "F11",
+                    "comment": "Toggle between full-screen"
+                },
+                "B2": {
+                    "key": "F5",
+                    "comment": "Refresh the current Web page"
+                },
+                "B4": {
+                    "key": "Ctrl+P",
+                    "comment": "Print the current page/frame"
+                },
+                "M1": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Go to the previous page"
+                },
+                "M2": {
+                    "key": "Alt+Shift+'",
+                    "comment": "Go to the next page"
+                },
+                "F2": {
+                    "key": "Ctrl+W",
+                    "comment": "Close the current window"
+                },
+                "F3": {
+                    "key": "Ctrl+O",
+                    "comment": "Open File"
+                },
+                "F4": {
+                    "key": "Alt+Shift+$",
+                    "comment": "Go to your Home page"
+                },
+                "F5": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Go to the previous page"
+                },
+                "F6": {
+                    "key": "Ctrl+H",
+                    "comment": "Open the History bar"
+                },
+                "F7": {
+                    "key": "Ctrl+I",
+                    "comment": "Open the Favorites bar"
+                },
+                "F8": {
+                    "key": "Ctrl+T",
+                    "comment": "Open New Tab"
+                },
+                "F9": {
+                    "key": "Ctrl+F",
+                    "comment": "Find"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Scroll Left"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Scroll Right"
+                },
+                "S-1": {
+                    "key": "Shift+&",
+                    "delay_ms": 500,
+                    "comment": "Scroll Up"
+                },
+                "S-2": {
+                    "key": "Shift+&",
+                    "delay_ms": 200,
+                    "comment": "Scroll Up"
+                },
+                "S-3": {
+                    "key": "Shift+&",
+                    "delay_ms": 100,
+                    "comment": "Scroll Up"
+                },
+                "S-4": {
+                    "key": "Shift+&",
+                    "delay_ms": 67,
+                    "comment": "Scroll Up"
+                },
+                "S-5": {
+                    "key": "Shift+&",
+                    "delay_ms": 33,
+                    "comment": "Scroll Up"
+                },
+                "S-6": {
+                    "key": "Shift+&",
+                    "delay_ms": 22,
+                    "comment": "Scroll Up"
+                },
+                "S-7": {
+                    "key": "Shift+&",
+                    "delay_ms": 17,
+                    "comment": "Scroll Up"
+                },
+                "S1": {
+                    "key": "Shift+(",
+                    "delay_ms": 500,
+                    "comment": "Scroll Down"
+                },
+                "S2": {
+                    "key": "Shift+(",
+                    "delay_ms": 200,
+                    "comment": "Scroll Down"
+                },
+                "S3": {
+                    "key": "Shift+(",
+                    "delay_ms": 100,
+                    "comment": "Scroll Down"
+                },
+                "S4": {
+                    "key": "Shift+(",
+                    "delay_ms": 67,
+                    "comment": "Scroll Down"
+                },
+                "S5": {
+                    "key": "Shift+(",
+                    "delay_ms": 33,
+                    "comment": "Scroll Down"
+                },
+                "S6": {
+                    "key": "Shift+(",
+                    "delay_ms": 22,
+                    "comment": "Scroll Down"
+                },
+                "S7": {
+                    "key": "Shift+(",
+                    "delay_ms": 17,
+                    "comment": "Scroll Down"
+                }
+            }
+        }
+    ]
+}

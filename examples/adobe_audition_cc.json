@@ -1,0 +1,146 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Audition CC",
+            "match_window_titles": [
+                "Adobe Audition CC",
+                "Audition"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "New Multitrack Session"
+                },
+                "B1": {
+                    "key": "Shift+space",
+                    "comment": "Record/Pause"
+                },
+                "B3": {
+                    "key": "space",
+                    "comment": "Stop Recording/Play"
+                },
+                "B4": {
+                    "key": "Ctrl+Shift+A",
+                    "comment": "Unselect"
+                },
+                "M1": {
+                    "key": "Shift+.",
+                    "comment": "Delete"
+                },
+                "M2": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "F2": {
+                    "key": "Alt+8",
+                    "comment": "Markers panel"
+                },
+                "F3": {
+                    "key": "Alt+5",
+                    "comment": "Match Volume"
+                },
+                "F4": {
+                    "key": "Alt+2",
+                    "comment": "Mixer window"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Move cursor to beginning"
+                },
+                "F6": {
+                    "key": "Shift+%",
+                    "comment": "Rewind"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Stop"
+                },
+                "F8": {
+                    "key": "Shift+'",
+                    "comment": "Fast Forward"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Move cursor to end"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Jog reverse"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Jog forward"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Shuttle reverse"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Shuttle reverse"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Shuttle reverse"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Shuttle reverse"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Shuttle reverse"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Shuttle reverse"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "comment": "Shuttle reverse"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Shuttle forward"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Shuttle forward"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Shuttle forward"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Shuttle forward"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Shuttle forward"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Shuttle forward"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "comment": "Shuttle forward"
+                }
+            }
+        }
+    ]
+}

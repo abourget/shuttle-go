@@ -1,0 +1,122 @@
+{
+    "apps": [
+        {
+            "name": "Apple Music",
+            "match_window_titles": [
+                "Apple Music",
+                "iTunes"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "New Playlist"
+                },
+                "B1": {
+                    "key": "Ctrl+T",
+                    "comment": "Turn Visuals On"
+                },
+                "B2": {
+                    "key": "Ctrl+Shift+2",
+                    "comment": "Equalizer"
+                },
+                "B3": {
+                    "key": "Ctrl+Shift+F",
+                    "comment": "Full Screen"
+                },
+                "B4": {
+                    "key": "Ctrl+L",
+                    "comment": "Show the currently playing song"
+                },
+                "M1": {
+                    "key": "Ctrl+J",
+                    "comment": "View Options"
+                },
+                "M2": {
+                    "key": "Ctrl+B",
+                    "comment": "Hide Menu Bar"
+                },
+                "F2": {
+                    "key": "Ctrl+O",
+                    "comment": "Add A File to Library"
+                },
+                "F5": {
+                    "key": "Ctrl+Alt+Shift+%",
+                    "comment": "Rewind"
+                },
+                "F6": {
+                    "key": "Shift+%",
+                    "comment": "Previous Song"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Pause"
+                },
+                "F8": {
+                    "key": "Shift+'",
+                    "comment": "Next Song"
+                },
+                "F9": {
+                    "key": "Ctrl+Alt+Shift+'",
+                    "comment": "Fast Forward"
+                },
+                "JogL": {
+                    "key": "Ctrl+Shift+(",
+                    "comment": "Volume Down"
+                },
+                "JogR": {
+                    "key": "Ctrl+Shift+&",
+                    "comment": "Volume Up"
+                },
+                "S-1": {
+                    "key": "Shift+&",
+                    "comment": "Scroll Up"
+                },
+                "S-4": {
+                    "key": "Shift+&",
+                    "delay_ms": 500,
+                    "comment": "Scroll Up 2x"
+                },
+                "S-5": {
+                    "key": "Shift+&",
+                    "delay_ms": 200,
+                    "comment": "Scroll Up 5x"
+                },
+                "S-6": {
+                    "key": "Shift+&",
+                    "delay_ms": 100,
+                    "comment": "Scroll Up 10x"
+                },
+                "S-7": {
+                    "key": "Shift+&",
+                    "delay_ms": 67,
+                    "comment": "Scroll Up 15x"
+                },
+                "S1": {
+                    "key": "Shift+(",
+                    "comment": "Scroll Down"
+                },
+                "S4": {
+                    "key": "Shift+(",
+                    "delay_ms": 500,
+                    "comment": "Scroll Down 2x"
+                },
+                "S5": {
+                    "key": "Shift+(",
+                    "delay_ms": 200,
+                    "comment": "Scroll Down 5x"
+                },
+                "S6": {
+                    "key": "Shift+(",
+                    "delay_ms": 100,
+                    "comment": "Scroll Down 10x"
+                },
+                "S7": {
+                    "key": "Shift+(",
+                    "delay_ms": 67,
+                    "comment": "Scroll Down 15x"
+                }
+            }
+        }
+    ]
+}

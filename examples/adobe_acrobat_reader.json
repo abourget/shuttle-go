@@ -1,0 +1,144 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Acrobat Reader",
+            "match_window_titles": [
+                "Adobe Acrobat Reader",
+                "Acrobat"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+O",
+                    "comment": "Open"
+                },
+                "B1": {
+                    "key": "Ctrl+Shift+K",
+                    "comment": "Rotate clockwise"
+                },
+                "B2": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom in"
+                },
+                "B3": {
+                    "key": "Ctrl+Shift+M",
+                    "comment": "Rotate counterclockwise"
+                },
+                "B4": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom out"
+                },
+                "M1": {
+                    "key": "Shift+%",
+                    "comment": "Previous page"
+                },
+                "M2": {
+                    "key": "Shift+'",
+                    "comment": "Next page"
+                },
+                "F2": {
+                    "key": "Ctrl+W",
+                    "comment": "Close"
+                },
+                "F3": {
+                    "key": "Ctrl+P",
+                    "comment": "Print"
+                },
+                "F4": {
+                    "key": "Ctrl+F",
+                    "comment": "Find"
+                },
+                "F5": {
+                    "key": "Ctrl+Shift+Shift+!",
+                    "comment": "First page"
+                },
+                "F6": {
+                    "key": "Ctrl+A",
+                    "comment": "Actual size"
+                },
+                "F7": {
+                    "key": "Ctrl+Shift+`",
+                    "comment": "Fit in window"
+                },
+                "F8": {
+                    "key": "Ctrl+B",
+                    "comment": "Fit width"
+                },
+                "JogL": {
+                    "key": "Shift+Shift+%",
+                    "comment": "Scroll left"
+                },
+                "JogR": {
+                    "key": "Shift+Shift+'",
+                    "comment": "Scroll right"
+                },
+                "S-1": {
+                    "key": "Shift+&",
+                    "comment": "Scroll up"
+                },
+                "S-2": {
+                    "key": "Shift+&",
+                    "delay_ms": 500,
+                    "comment": "Scroll up"
+                },
+                "S-3": {
+                    "key": "Shift+&",
+                    "delay_ms": 200,
+                    "comment": "Scroll up"
+                },
+                "S-4": {
+                    "key": "Shift+&",
+                    "delay_ms": 100,
+                    "comment": "Scroll up"
+                },
+                "S-5": {
+                    "key": "Shift+&",
+                    "delay_ms": 67,
+                    "comment": "Scroll up"
+                },
+                "S-6": {
+                    "key": "Shift+&",
+                    "delay_ms": 33,
+                    "comment": "Scroll up"
+                },
+                "S-7": {
+                    "key": "Shift+&",
+                    "comment": "Scroll up"
+                },
+                "S1": {
+                    "key": "Shift+(",
+                    "comment": "Scroll down"
+                },
+                "S2": {
+                    "key": "Shift+(",
+                    "delay_ms": 500,
+                    "comment": "Scroll down"
+                },
+                "S3": {
+                    "key": "Shift+(",
+                    "delay_ms": 200,
+                    "comment": "Scroll down"
+                },
+                "S4": {
+                    "key": "Shift+(",
+                    "delay_ms": 100,
+                    "comment": "Scroll down"
+                },
+                "S5": {
+                    "key": "Shift+(",
+                    "delay_ms": 67,
+                    "comment": "Scroll down"
+                },
+                "S6": {
+                    "key": "Shift+(",
+                    "delay_ms": 33,
+                    "comment": "Scroll down"
+                },
+                "S7": {
+                    "key": "Shift+(",
+                    "comment": "Scroll down"
+                }
+            }
+        }
+    ]
+}

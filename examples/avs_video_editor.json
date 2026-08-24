@@ -1,0 +1,146 @@
+{
+    "apps": [
+        {
+            "name": "AVS Video Editor",
+            "match_window_titles": [
+                "AVS Video Editor",
+                "AVSVideoEditor"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+S",
+                    "comment": "Save Project"
+                },
+                "B3": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "B4": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "M1": {
+                    "key": "W",
+                    "comment": "Split"
+                },
+                "M2": {
+                    "key": "Shift+.",
+                    "comment": "Delete scene"
+                },
+                "F2": {
+                    "key": "Z",
+                    "comment": "Full screen"
+                },
+                "F3": {
+                    "key": "Ctrl+3",
+                    "comment": "Transition"
+                },
+                "F4": {
+                    "key": "Ctrl+4",
+                    "comment": "Video Effects"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Project Start"
+                },
+                "F6": {
+                    "key": "Alt+Shift+(",
+                    "comment": "Decrease speed"
+                },
+                "F7": {
+                    "key": "Ctrl+space",
+                    "comment": "Play/Pause"
+                },
+                "F8": {
+                    "key": "Alt+Shift+&",
+                    "comment": "Increase speed"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Project End"
+                },
+                "JogL": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Alt+Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Reverse 5 frames per sec."
+                },
+                "S-2": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Reverse 10 frames per sec."
+                },
+                "S-3": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Reverse 15 frames per sec."
+                },
+                "S-4": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Reverse 30 frames per sec."
+                },
+                "S-5": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Reverse 45 frames per sec."
+                },
+                "S-6": {
+                    "key": "Alt+Shift+%",
+                    "delay_ms": 17,
+                    "comment": "Reverse 60 frames per sec."
+                },
+                "S-7": {
+                    "key": "Alt+Shift+%",
+                    "comment": "Rewind"
+                },
+                "S0": {
+                    "key": "Ctrl+Alt+space",
+                    "comment": "Stop"
+                },
+                "S1": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward 5 frames per sec."
+                },
+                "S2": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward 10 frames per sec."
+                },
+                "S3": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward 15 frames per sec."
+                },
+                "S4": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward 30 frames per sec."
+                },
+                "S5": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward 45 frames per sec."
+                },
+                "S6": {
+                    "key": "Alt+Shift+'",
+                    "delay_ms": 17,
+                    "comment": "Forward 60 frames per sec."
+                },
+                "S7": {
+                    "key": "Alt+Shift+'",
+                    "comment": "Fast Forward"
+                }
+            }
+        }
+    ]
+}

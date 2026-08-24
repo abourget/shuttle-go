@@ -1,0 +1,126 @@
+{
+    "apps": [
+        {
+            "name": "EditShare Lightworks",
+            "match_window_titles": [
+                "EditShare Lightworks",
+                "Lightworks"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "V",
+                    "comment": "Insert/Swap/Last Out/Full Scr"
+                },
+                "B3": {
+                    "key": "N",
+                    "comment": "Pop-Out Original"
+                },
+                "M1": {
+                    "key": "Alt+Shift+K",
+                    "comment": "Stop"
+                },
+                "F2": {
+                    "key": "Shift+B",
+                    "comment": "Replace/Switch/Trim In/Mixer"
+                },
+                "F3": {
+                    "key": "Z",
+                    "comment": "Remove/Undo/Trim Out/Routing"
+                },
+                "F4": {
+                    "key": "X",
+                    "comment": "Delete/Redo/Next In/Vectorscope"
+                },
+                "F5": {
+                    "key": "Shift+J",
+                    "comment": "Play Rev/Nudge Rev/Preview/Exp"
+                },
+                "F6": {
+                    "key": "Shift+L",
+                    "comment": "Play Fwd/Nudge Fwd/Slip/Freeze"
+                },
+                "F7": {
+                    "key": "I",
+                    "comment": "Mark/Unmark/Slide/Subclip"
+                },
+                "F8": {
+                    "key": "A",
+                    "comment": "Pre Edit/Start/MoveCut/AddTrans"
+                },
+                "F9": {
+                    "key": "S",
+                    "comment": "NextEdit/End/AddCut/Con Manager"
+                },
+                "JogL": {
+                    "key": "Shift+&",
+                    "comment": "Jog Rev/Zoom Out"
+                },
+                "JogR": {
+                    "key": "Shift+(",
+                    "comment": "Jog Right/Zoom In"
+                },
+                "S-1": {
+                    "key": "Ctrl+2",
+                    "comment": "20% Reverse"
+                },
+                "S-2": {
+                    "key": "Ctrl+4",
+                    "comment": "40% Reverse"
+                },
+                "S-3": {
+                    "key": "Ctrl+6",
+                    "comment": "60% Reverse"
+                },
+                "S-4": {
+                    "key": "Ctrl+8",
+                    "comment": "80% Reverse"
+                },
+                "S-5": {
+                    "key": "Ctrl+0",
+                    "comment": "200% Reverse"
+                },
+                "S-6": {
+                    "key": "Ctrl+Shift+2",
+                    "comment": "600% Reverse"
+                },
+                "S-7": {
+                    "key": "Ctrl+Shift+4",
+                    "comment": "1000% Reverse"
+                },
+                "S0": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "S1": {
+                    "key": "Shift+2",
+                    "comment": "20% Forward"
+                },
+                "S2": {
+                    "key": "Shift+4",
+                    "comment": "40%  Forward"
+                },
+                "S3": {
+                    "key": "Shift+6",
+                    "comment": "60%  Forward"
+                },
+                "S4": {
+                    "key": "Shift+8",
+                    "comment": "80%  Forward"
+                },
+                "S5": {
+                    "key": "Shift+0",
+                    "comment": "200%  Forward"
+                },
+                "S6": {
+                    "key": "Alt+Shift+2",
+                    "comment": "600%  Forward"
+                },
+                "S7": {
+                    "key": "Alt+Shift+4",
+                    "comment": "1000%  Forward"
+                }
+            }
+        }
+    ]
+}

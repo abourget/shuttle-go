@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Shuttle Go
+Comment=Contour Design Shuttle Pro V2 driver
+Exec=shuttle-go
+Icon=shuttle-go
+Type=Application
+Terminal=false
+Categories=Utility;

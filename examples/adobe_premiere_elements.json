@@ -1,0 +1,133 @@
+{
+    "apps": [
+        {
+            "name": "Adobe Premiere Elements",
+            "match_window_titles": [
+                "Adobe Premiere Elements"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+N",
+                    "comment": "New Project"
+                },
+                "B1": {
+                    "key": "Ctrl+K",
+                    "comment": "Split Clip"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+O",
+                    "comment": "Open Project"
+                },
+                "F3": {
+                    "key": "Ctrl+S",
+                    "comment": "Save Project"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Go to Beginning"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Reverse"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Stop"
+                },
+                "F8": {
+                    "key": "L",
+                    "comment": "Forward"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Go to End"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "comment": "Shuttle Reverse 1x"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Shuttle Reverse 2x"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Shuttle Reverse 5x"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Shuttle Reverse 10x"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Shuttle Reverse 15x"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Reverse 30x"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Reverse 30x"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "comment": "Shuttle Forward 1x"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Shuttle Forward 2x"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Shuttle Forward 5x"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Shuttle Forward 10x"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Shuttle Forward 15x"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Forward 30x"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Shuttle Forward 3x"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,134 @@
+{
+    "apps": [
+        {
+            "name": "MAGIX Music Maker",
+            "match_window_titles": [
+                "MAGIX Music Maker",
+                "MusicMaker"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "B1": {
+                    "key": "Shift+N",
+                    "comment": "Normalize"
+                },
+                "B2": {
+                    "key": "Ctrl+M",
+                    "comment": "Mute/Unmute"
+                },
+                "B3": {
+                    "key": "Ctrl+S",
+                    "comment": "Save"
+                },
+                "B4": {
+                    "key": "Ctrl+G",
+                    "comment": "Group objects"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Restore"
+                },
+                "F2": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F3": {
+                    "key": "Ctrl+V",
+                    "comment": "Insert"
+                },
+                "F4": {
+                    "key": "Ctrl+D",
+                    "comment": "Duplicating"
+                },
+                "F5": {
+                    "key": "Ctrl+Shift+$",
+                    "comment": "Go to start marker"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Stop playback"
+                },
+                "F8": {
+                    "key": "T",
+                    "comment": "Split"
+                },
+                "F9": {
+                    "key": "Ctrl+Shift+#",
+                    "comment": "Go to end marker"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Backward"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward"
+                },
+                "S-1": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-2": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-3": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-4": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-5": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-6": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S-7": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Backward"
+                },
+                "S1": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S2": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S3": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S4": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S5": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S6": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                },
+                "S7": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward"
+                }
+            }
+        }
+    ]
+}

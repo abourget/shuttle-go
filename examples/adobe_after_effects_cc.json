@@ -1,0 +1,105 @@
+{
+    "apps": [
+        {
+            "name": "Adobe After Effects CC",
+            "match_window_titles": [
+                "Adobe After Effects CC",
+                "AfterFX"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "B1": {
+                    "key": "V",
+                    "comment": "Selection tool"
+                },
+                "B2": {
+                    "key": "H",
+                    "comment": "Hand tool"
+                },
+                "B3": {
+                    "key": "W",
+                    "comment": "Rotation tool"
+                },
+                "B4": {
+                    "key": "Z",
+                    "comment": "Zoom tool"
+                },
+                "F2": {
+                    "key": "Ctrl+K",
+                    "comment": "Composition Settings"
+                },
+                "F3": {
+                    "key": "Ctrl+Shift+(",
+                    "comment": "Select next layer back"
+                },
+                "F4": {
+                    "key": "Ctrl+Shift+&",
+                    "comment": "Select next layer forward"
+                },
+                "F5": {
+                    "key": "Shift+$",
+                    "comment": "Go to in point"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Go to previous keyframe"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play"
+                },
+                "F8": {
+                    "key": "K",
+                    "comment": "Go to next keyframe"
+                },
+                "F9": {
+                    "key": "Shift+#",
+                    "comment": "Go to out point"
+                },
+                "JogL": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Reverse frame by frame"
+                },
+                "JogR": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Forward frame by frame"
+                },
+                "S-1": {
+                    "key": "Shift+!",
+                    "delay_ms": 500,
+                    "comment": "Reverse 2 frames per sec."
+                },
+                "S-2": {
+                    "key": "Shift+!",
+                    "delay_ms": 200,
+                    "comment": "Reverse  frames per sec."
+                },
+                "S-3": {
+                    "key": "Shift+!",
+                    "delay_ms": 100,
+                    "comment": "Reverse  frames per sec."
+                },
+                "S-4": {
+                    "key": "Shift+!",
+                    "delay_ms": 67,
+                    "comment": "Reverse  frames per sec."
+                },
+                "S-5": {
+                    "key": "Shift+!",
+                    "delay_ms": 33,
+                    "comment": "Reverse  frames per sec."
+                },
+                "S-6": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 100,
+                    "comment": "Rewind"
+                },
+                "S-7": {
+                    "key": "Shift+Shift+!",
+                    "delay_ms": 67,
+                    "comment": "Rewind"
+                }
+            }
+        }
+    ]
+}

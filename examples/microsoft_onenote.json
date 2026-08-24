@@ -1,0 +1,76 @@
+{
+    "apps": [
+        {
+            "name": "Microsoft OneNote",
+            "match_window_titles": [
+                "Microsoft OneNote",
+                "ONENOTE"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "B1": {
+                    "key": "Ctrl+N",
+                    "comment": "New Page"
+                },
+                "B2": {
+                    "key": "Ctrl+T",
+                    "comment": "New Section"
+                },
+                "B3": {
+                    "key": "Ctrl+L",
+                    "comment": "Align Left"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Y",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+X",
+                    "comment": "Cut"
+                },
+                "F3": {
+                    "key": "Ctrl+C",
+                    "comment": "Copy"
+                },
+                "F4": {
+                    "key": "Ctrl+V",
+                    "comment": "Paste"
+                },
+                "F5": {
+                    "key": "F11",
+                    "comment": "Full Screen On/Off"
+                },
+                "F6": {
+                    "key": "Shift+X",
+                    "comment": "Sync this notebook"
+                },
+                "F7": {
+                    "key": "Ctrl+F",
+                    "comment": "Search Current Page"
+                },
+                "F8": {
+                    "key": "F3",
+                    "comment": "Move to the Next Result"
+                },
+                "F9": {
+                    "key": "Ctrl+E",
+                    "comment": "Search All Notebooks"
+                },
+                "JogL": "Shift+%",
+                "JogR": "Shift+'",
+                "S-7": {
+                    "key": "Shift+!",
+                    "comment": "Page Up"
+                }
+            }
+        }
+    ]
+}

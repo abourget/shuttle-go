@@ -1,0 +1,150 @@
+{
+    "apps": [
+        {
+            "name": "AVS Audio Editor",
+            "match_window_titles": [
+                "AVS Audio Editor",
+                "AVSAudioEditor"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "Ctrl+S",
+                    "comment": "Save File"
+                },
+                "B1": {
+                    "key": "Shift+Shift+%",
+                    "comment": "Increase the left selection"
+                },
+                "B2": {
+                    "key": "Shift+Shift+'",
+                    "comment": "Increase the right selection"
+                },
+                "B3": {
+                    "key": "Ctrl+Shift+%",
+                    "comment": "Decrease the left selection"
+                },
+                "B4": {
+                    "key": "Ctrl+Shift+'",
+                    "comment": "Decrease the right selection"
+                },
+                "M1": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "M2": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Redo"
+                },
+                "F2": {
+                    "key": "Ctrl+T",
+                    "comment": "Trims to selection"
+                },
+                "F3": {
+                    "key": "Shift+.",
+                    "comment": "Deletes selection"
+                },
+                "F4": {
+                    "key": "W",
+                    "comment": "Add marker"
+                },
+                "F5": {
+                    "key": "Ctrl+M",
+                    "comment": "Zoom out"
+                },
+                "F6": {
+                    "key": "Shift+$",
+                    "comment": "Move cursor to the beginning"
+                },
+                "F7": {
+                    "key": "space",
+                    "comment": "Play/Pause"
+                },
+                "F8": {
+                    "key": "Shift+#",
+                    "comment": "Move cursor to the end"
+                },
+                "F9": {
+                    "key": "Ctrl+K",
+                    "comment": "Zoom in"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Move cursor left"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Move cursor right"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Rewind"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Rewind"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Rewind"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Rewind"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Rewind"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Rewind"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "comment": "Rewind"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Forward"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "comment": "Forward"
+                }
+            }
+        }
+    ]
+}

@@ -10,6 +10,6 @@ if [ $MINOR != "79" ]; then exit 99; fi
 
 export XAUTHORITY=$HOME/.Xauthority
 export DISPLAY=:0.0
-export PATH=/usr/bin  # which includes the path to `xdotool`
+export PATH=/usr/bin:/usr/local/bin  # dbus-send, libinput, xinput
 
 $HOME/go/bin/shuttle-go -config $HOME/.shuttle-go.json -log-file /tmp/shuttle-go.log $DEVNAME &

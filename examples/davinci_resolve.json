@@ -1,0 +1,152 @@
+{
+    "apps": [
+        {
+            "name": "DaVinci Resolve",
+            "match_window_titles": [
+                "DaVinci Resolve",
+                "Resolve"
+            ],
+            "slow_jog": 200,
+            "bindings": {
+                "F1": {
+                    "key": "X",
+                    "comment": "Insert Clip"
+                },
+                "B1": {
+                    "key": "Alt+I",
+                    "comment": "Clear In"
+                },
+                "B2": {
+                    "key": "Alt+O",
+                    "comment": "Clear Out"
+                },
+                "B3": {
+                    "key": "Ctrl+Z",
+                    "comment": "Undo"
+                },
+                "B4": {
+                    "key": "Ctrl+Shift+Z",
+                    "comment": "Redo"
+                },
+                "M1": {
+                    "key": "I",
+                    "comment": "Mark In"
+                },
+                "M2": {
+                    "key": "O",
+                    "comment": "Mark Out"
+                },
+                "F2": {
+                    "key": "Y",
+                    "comment": "Overwrite Clip"
+                },
+                "F4": {
+                    "key": "N",
+                    "comment": "Snapping On/Off"
+                },
+                "F5": {
+                    "key": "Shift+&",
+                    "comment": "Previous Edit"
+                },
+                "F6": {
+                    "key": "J",
+                    "comment": "Reverse"
+                },
+                "F7": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "F8": {
+                    "key": "L",
+                    "comment": "Forward"
+                },
+                "F9": {
+                    "key": "Shift+(",
+                    "comment": "Next Edit"
+                },
+                "JogL": {
+                    "key": "Shift+%",
+                    "comment": "Backward One Frame"
+                },
+                "JogR": {
+                    "key": "Shift+'",
+                    "comment": "Forward One Frame"
+                },
+                "S-1": {
+                    "key": "Shift+%",
+                    "delay_ms": 500,
+                    "comment": "Reverse 2 Frames"
+                },
+                "S-2": {
+                    "key": "Shift+%",
+                    "delay_ms": 200,
+                    "comment": "Reverse 5 Frames"
+                },
+                "S-3": {
+                    "key": "Shift+%",
+                    "delay_ms": 100,
+                    "comment": "Reverse 10 Frames"
+                },
+                "S-4": {
+                    "key": "Shift+%",
+                    "delay_ms": 67,
+                    "comment": "Reverse 15 Frames"
+                },
+                "S-5": {
+                    "key": "Shift+%",
+                    "delay_ms": 33,
+                    "comment": "Reverse 30 Frames"
+                },
+                "S-6": {
+                    "key": "Shift+%",
+                    "delay_ms": 22,
+                    "comment": "Reverse 45 Frames"
+                },
+                "S-7": {
+                    "key": "Shift+%",
+                    "delay_ms": 17,
+                    "comment": "Reverse 60 Frames"
+                },
+                "S0": {
+                    "key": "K",
+                    "comment": "Stop"
+                },
+                "S1": {
+                    "key": "Shift+'",
+                    "delay_ms": 500,
+                    "comment": "Forward 2 Frames"
+                },
+                "S2": {
+                    "key": "Shift+'",
+                    "delay_ms": 200,
+                    "comment": "Forward 5 Frames"
+                },
+                "S3": {
+                    "key": "Shift+'",
+                    "delay_ms": 100,
+                    "comment": "Forward 10 Frames"
+                },
+                "S4": {
+                    "key": "Shift+'",
+                    "delay_ms": 67,
+                    "comment": "Forward 15 Frames"
+                },
+                "S5": {
+                    "key": "Shift+'",
+                    "delay_ms": 33,
+                    "comment": "Forward 30 Frames"
+                },
+                "S6": {
+                    "key": "Shift+'",
+                    "delay_ms": 22,
+                    "comment": "Forward 45 Frames"
+                },
+                "S7": {
+                    "key": "Shift+'",
+                    "delay_ms": 17,
+                    "comment": "Forward 60 Frames"
+                }
+            }
+        }
+    ]
+}
